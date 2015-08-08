@@ -68,7 +68,7 @@ class Application extends BaseApplication
 
         $this->registerModules([
             'frontend' => [
-                'className' => 'Frontend\Module',
+                'className' => 'frontend\Module',
                 'path' => '../frontend/Module.php'
             ],
 //            'backend' => [

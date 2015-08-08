@@ -41,6 +41,7 @@ class Module
         $loader = new Loader();
 
         $loader->registerNamespaces([
+            'common\helpers'        => '../common/helpers/',
             'frontend\controllers'  => '../frontend/controllers/',
             'frontend\models'       => '../frontend/models/',
             'frontend\forms'        => '../frontend/forms/'
