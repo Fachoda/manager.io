@@ -1,0 +1,1 @@
+"use strict";angular.module("Manager",["ngAnimate","ngAria","ngCookies","ngMessages","ngResource","ngRoute","ngSanitize","ngTouch","ngMaterial"]).config(["$routeProvider",function(a){a.otherwise({redirectTo:"/"})}]);
