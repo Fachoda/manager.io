@@ -31,6 +31,21 @@ module.exports = function (grunt) {
     // Project settings
     yeoman: appConfig,
 
+    //less watcher
+
+    less: {
+      development: {
+        options: {
+          compress: false,
+          yuicompress: false,
+          optimization: 2
+        },
+        files: {
+          "app/styles/theme-base.css": "app/assets/less/theme-base.less"
+        }
+      }
+    },
+
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       bower: {
@@ -49,8 +64,8 @@ module.exports = function (grunt) {
         tasks: ['newer:jshint:test', 'karma']
       },
       styles: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
-        tasks: ['newer:copy:styles', 'autoprefixer']
+        files: ['<%= yeoman.app %>/styles/{,*/}*.css', '<%= yeoman.app %>/assets/less/{,*/}*.less'],
+        tasks: ['less', 'newer:copy:styles', 'autoprefixer']
       },
       gruntfile: {
         files: ['Gruntfile.js']
@@ -361,6 +376,7 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             '.htaccess',
             '*.html',
+            'assets/less/{,*/}*',
             'images/{,*/}*.{webp}',
             'styles/fonts/{,*/}*.*'
           ]
@@ -403,6 +419,7 @@ module.exports = function (grunt) {
     }
   });
 
+  grunt.loadNpmTasks('grunt-contrib-less');
 
   grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
     if (target === 'dist') {
@@ -413,7 +430,7 @@ module.exports = function (grunt) {
       'clean:server',
       'wiredep',
       'concurrent:server',
-      'autoprefixer:server',
+      //'autoprefixer:server',
       'connect:livereload',
       'watch'
     ]);
@@ -442,6 +459,7 @@ module.exports = function (grunt) {
     'ngtemplates',
     'concat',
     'ngAnnotate',
+    'less',
     'copy:dist',
     'cdnify',
     'cssmin',
@@ -455,5 +473,10 @@ module.exports = function (grunt) {
     'newer:jshint',
     'test',
     'build'
+  ]);
+
+  grunt.registerTask('bless', [
+    'clean:dist',
+    'less'
   ]);
 };

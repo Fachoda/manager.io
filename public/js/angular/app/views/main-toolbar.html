@@ -1,0 +1,33 @@
+<md-toolbar class="admin-toolbar"
+            md-theme="blue-lighter" ui-view="toolbar" md-scroll-shrink="true">
+  <div class="md-toolbar-tools">
+    <button class="md-icon-button md-button md-white-cyan-theme"
+            ng-click="toggleMainMenu()" aria-label="side navigation" tabindex="0">
+      <md-icon md-svg-icon="bower_components/material-design-icons/navigation/svg/design/ic_chevron_right_24px.svg" ng-click="toggleMainMenu()"></md-icon>
+    </button>
+        <span class="breadcrumb" hide-sm="" flex="" ria-hidden="true">
+          <span>
+            Introduction
+            <md-icon md-font-icon="icon-chevron-right" class="md-font icon-chevron-right" aria-hidden="true"></md-icon>
+          </span>
+        </span>
+
+    <button class="md-icon-button toolbar-button animated md-button" tabindex="0">
+      <md-icon md-font-icon="icon-email" class="ng-scope ng-isolate-scope md-white-cyan-theme md-font icon-email"
+               aria-hidden="true"></md-icon>
+            <span class="toolbar-button-badge animated ng-scope md-white-cyan-theme toolbar-button-badge-new"
+                  theme-background="accent" ng-class="{'toolbar-button-badge-new':emailNew}"
+                  style="border-color: rgb(0, 188, 212); color: rgb(255, 255, 255); background-color: rgb(0, 188, 212);">5</span>
+    </button>
+
+    <button class="md-icon-button toolbar-button md-button md-white-cyan-theme"
+            ng-click="toggleNotificationsTab(1)" tabindex="0">
+      <md-icon md-font-icon="fa fa-bell-o"
+               class="ng-scope ng-isolate-scope md-white-cyan-theme md-font fa fa-bell-o"
+               aria-hidden="true"></md-icon>
+            <span class="toolbar-button-badge ng-scope md-white-cyan-theme" theme-background="accent"
+                  style="border-color: rgb(0, 188, 212); color: rgb(255, 255, 255); background-color: rgb(0, 188, 212);">2</span>
+    </button>
+  </div>
+
+</md-toolbar>

@@ -1,0 +1,37 @@
+<div class="page-wrapper" layout="column" layout-align="" flex>
+  <!-- top menu -->
+  <md-toolbar class="md-whiteframe-z1">
+    <div class="md-toolbar-tools">
+      <md-button class="md-icon-button" ng-click="toggleMainMenu()">
+        <md-icon md-font-set="mi"> menu </md-icon>
+      </md-button>
+      <span>Manager</span>
+      <!-- fill up the space between left and right area -->
+      <span flex></span>
+      <md-button class="md-icon-button">
+        <md-icon md-svg-icon=""></md-icon>
+      </md-button>
+      <md-button class="md-icon-button">
+        <md-icon md-font-set="mi"> face </md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+  <!-- top menu -->
+
+  <section layout="row" class="left-sidenav full-height">
+    <md-sidenav class="md-sidenav-left md-whiteframe-z2"  md-component-id="main-menu">
+      <md-content>
+        <md-list md-theme="default" class="md-hue-1">
+          <md-list-item><md-icon md-font-set="mi" class="md-accent"> face </md-icon><p>Projects</p></md-list-item>
+          <md-list-item><p>Stories</p></md-list-item>
+          <md-list-item><p>Tasks</p></md-list-item>
+          <md-list-item><p>Bugs</p></md-list-item>
+        </md-list>
+      </md-content>
+    </md-sidenav>
+    <md-content>
+      my content here
+    </md-content>
+  </section>
+</div>
+

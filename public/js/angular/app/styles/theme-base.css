@@ -1,0 +1,14 @@
+[layout="row"]::after,
+[layout="column"]::after {
+  clear: both;
+}
+section.left-sidenav {
+  position: relative;
+}
+section.left-sidenav > md-backdrop {
+  display: none;
+}
+section.left-sidenav > md-sidenav {
+  position: static;
+  z-index: 1;
+}

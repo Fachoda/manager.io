@@ -8,7 +8,7 @@
  *
  * Main module of the application.
  */
-angular
+var app = angular
   .module('Manager', [
     'ngAnimate',
     'ngAria',
@@ -20,8 +20,21 @@ angular
     'ngTouch',
     'ngMaterial'
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, $mdThemingProvider, $mdIconProvider) {
+    $mdThemingProvider.theme('default')
+      .primaryPalette('green')
+      .accentPalette('red');
+
+    $mdThemingProvider.theme('red')
+      .primaryPalette('red');
+
+    $mdIconProvider
+      .fontSet('mi', 'material-icons');
+
     $routeProvider
+      .when('/', {
+        templateUrl: '/views/main.html'
+      })
       .otherwise({
         redirectTo: '/'
       });
