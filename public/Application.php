@@ -1,7 +1,5 @@
 <?php
 
-error_reporting(E_ALL);
-
 use Phalcon\Loader;
 use Phalcon\Mvc\Router;
 use Phalcon\DI\FactoryDefault;
@@ -38,6 +36,12 @@ class Application extends BaseApplication
                 'action' => 2
             ]);
 
+            $router->add('/admin', [
+                'module' => 'backend',
+                'controller' => 'index',
+                'action' => 'index'
+            ]);
+
             $router->add('/admin/:controller/:action', [
                 'module' => 'backend',
                 'controller' => 1,
@@ -68,13 +72,13 @@ class Application extends BaseApplication
 
         $this->registerModules([
             'frontend' => [
-                'className' => 'Frontend\Module',
-                'path' => '../frontend/Module.php'
+                'className' => 'app\frontend\Module',
+                'path' => APP_PATH . '/frontend/Module.php'
             ],
-//            'backend' => [
-//                'className' => 'Backend\Module',
-//                'path' => '../backend/Module.php'
-//            ]
+            'backend' => [
+                'className' => 'app\backend\Module',
+                'path' => APP_PATH . '/backend/Module.php'
+            ]
         ]);
 
         echo $this->handle()->getContent();
