@@ -1,16 +1,16 @@
 <?php
 
-namespace frontend;
+namespace app\backend;
 
-use Phalcon\Loader;
-use Phalcon\Mvc\Dispatcher;
-use Phalcon\Mvc\Url as UrlResolver;
-use Phalcon\Mvc\View;
-use Phalcon\Mvc\View\Engine\Volt as VoltEngine;
-use Phalcon\Mvc\Model\Metadata\Memory as MetaDataAdapter;
-use Phalcon\Events\Manager;
-use Phalcon\Db\Adapter\Pdo\Mysql as MysqlAdapter;
-use Phalcon\Session\Adapter\Files as SessionAdapter;
+    use Phalcon\Loader;
+    use Phalcon\Mvc\Dispatcher;
+    use Phalcon\Mvc\Url as UrlResolver;
+    use Phalcon\Mvc\View;
+    use Phalcon\Mvc\View\Engine\Volt as VoltEngine;
+    use Phalcon\Mvc\Model\Metadata\Memory as MetaDataAdapter;
+    use Phalcon\Events\Manager;
+    use Phalcon\Db\Adapter\Pdo\Mysql as MysqlAdapter;
+    use Phalcon\Session\Adapter\Files as SessionAdapter;
 
 class Module
 {
@@ -21,13 +21,13 @@ class Module
         return new \Phalcon\Config(array(
             'database' => require(APP_PATH . '/common/config/database.php'),
             'application' => array(
-                'controllersDir' => APP_PATH . '/frontend/controllers/',
-                'modelsDir'      => APP_PATH . '/frontend/models/',
-                'migrationsDir'  => APP_PATH . '/frontend/migrations/',
-                'viewsDir'       => APP_PATH . '/frontend/views/',
-                'pluginsDir'     => APP_PATH . '/frontend/plugins/',
-                'libraryDir'     => APP_PATH . '/frontend/library/',
-                'cacheDir'       => APP_PATH . '/frontend/cache/',
+                'controllersDir' => APP_PATH . '/backend/controllers/',
+                'modelsDir'      => APP_PATH . '/backend/models/',
+                'migrationsDir'  => APP_PATH . '/backend/migrations/',
+                'viewsDir'       => APP_PATH . '/backend/views/',
+                'pluginsDir'     => APP_PATH . '/backend/plugins/',
+                'libraryDir'     => APP_PATH . '/backend/library/',
+                'cacheDir'       => APP_PATH . '/backend/cache/',
                 'baseUri'        => '/manager.io/',
             )
         ));
@@ -41,16 +41,16 @@ class Module
         $loader = new Loader();
 
         $loader->registerNamespaces([
-            'frontend\controllers'  => '../frontend/controllers/',
-            'frontend\models'       => '../frontend/models/',
-            'frontend\forms'        => '../frontend/forms/'
+            'app\backend\controllers'  => APP_PATH . '/backend/controllers/',
+            'app\backend\models'       => APP_PATH . '/backend/models/',
+            'app\backend\forms'        => APP_PATH . '/backend/forms/'
         ]);
 
         $loader->register();
     }
 
     /**
-     * Register services used by the frontend application
+     * Register services used by the backend application
      *
      * @param $di
      */
@@ -65,10 +65,10 @@ class Module
             $dispatcher = new Dispatcher();
 
             /*$eventManager = new Manager();
-            $eventManager->attach('dispatch', new \Acl('frontend'));
+            $eventManager->attach('dispatch', new \Acl('backend'));
 
             $dispatcher->setEventsManager($eventManager);*/
-            $dispatcher->setDefaultNamespace('frontend\controllers');
+            $dispatcher->setDefaultNamespace('app\backend\controllers');
 
             return $dispatcher;
         });

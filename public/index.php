@@ -1,38 +1,25 @@
 <?php
-
-ini_set('display_errors', true);
-error_reporting(E_ALL);
-define('APP_PATH', realpath('..'));
+defined('PHALCON_DEBUG') or define('PHALCON_DEBUG', true);
+defined('APP_PATH') or define('APP_PATH', realpath('../app'));
 
 require_once(__DIR__ . '/Application.php');
 
-$application = new Application();
-$application->run();
+if (defined('PHALCON_DEBUG') && PHALCON_DEBUG === true) {
+    ini_set('display_errors', true);
+    error_reporting(E_ALL);
 
-//try {
-//
-//    /**
-//     * Read the configuration
-//     */
-//    $config = include APP_PATH . "/frontend/config/config.php";
-//
-//    /**
-//     * Read auto-loader
-//     */
-//    include APP_PATH . "/frontend/config/loader.php";
-//
-//    /**
-//     * Read services
-//     */
-//    include APP_PATH . "/frontend/config/services.php";
-//
-//    /**
-//     * Handle the request
-//     */
-//    $application = new \Phalcon\Mvc\Application($di);
-//
-//    echo $application->handle()->getContent();
-//
-//} catch (\Exception $e) {
-//    echo $e->getMessage();
-//}
+    (new Phalcon\Debug())->listen();
+
+    $application = new Application();
+    $application->run();
+} else {
+    try {
+        /**
+         * Handle requests
+         */
+        $application = new Application();
+        $application->run();
+    } catch (\Exception $e) {
+        echo $e->getMessage();
+    }
+}
