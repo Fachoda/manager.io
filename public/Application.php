@@ -19,8 +19,18 @@ class Application extends BaseApplication
          * Register the common libraries
          */
         $loader->registerDirs([
-            __DIR__ . '/../common/libraries/'
-        ])->register();
+            APP_PATH . '/common/components/',
+            APP_PATH . '/common/helpers/'
+        ]);
+
+        /**
+         * Register common namespaces
+         */
+        $loader->registerNamespaces([
+            'app\common\helpers'    => APP_PATH . '/common/helpers/'
+        ]);
+
+        $loader->register();
 
         /**
          * Register a router
@@ -72,12 +82,12 @@ class Application extends BaseApplication
 
         $this->registerModules([
             'frontend' => [
-                'className' => 'app\frontend\Module',
-                'path' => APP_PATH . '/frontend/Module.php'
+                'className'     => 'app\frontend\Module',
+                'path'          => APP_PATH . '/frontend/Module.php'
             ],
             'backend' => [
-                'className' => 'app\backend\Module',
-                'path' => APP_PATH . '/backend/Module.php'
+                'className'     => 'app\backend\Module',
+                'path'          => APP_PATH . '/backend/Module.php'
             ]
         ]);
 

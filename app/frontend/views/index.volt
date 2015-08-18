@@ -1,11 +1,14 @@
-<!DOCTYPE html>
-<html>
+{{ getDoctype() }}
+<html ng-app="Manager">
     <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Phalcon PHP Framework</title>
+        <title>Manager.io</title>
+<!--        {{ assets.outputCss('header') }}-->
+        <link rel="stylesheet" href="js/angular/bower_components/angular-material/angular-material.css" />
     </head>
     <body>
         {{ content() }}
+
+        {{ assets.outputJs('footer') }}
     </body>
 </html>

@@ -1,6 +1,7 @@
 <?php
 defined('PHALCON_DEBUG') or define('PHALCON_DEBUG', true);
 defined('APP_PATH') or define('APP_PATH', realpath('../app'));
+defined('PUBLIC_PATH') or define('PUBLIC_PATH', realpath('../public'));
 
 require_once(__DIR__ . '/Application.php');
 

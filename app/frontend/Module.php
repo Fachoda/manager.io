@@ -2,6 +2,7 @@
 
 namespace app\frontend;
 
+use app\common\helpers\VoltHelper;
 use Phalcon\Loader;
 use Phalcon\Mvc\Dispatcher;
 use Phalcon\Mvc\Url as UrlResolver;
@@ -28,7 +29,7 @@ class Module
                 'pluginsDir'     => APP_PATH . '/frontend/plugins/',
                 'libraryDir'     => APP_PATH . '/frontend/library/',
                 'cacheDir'       => APP_PATH . '/frontend/cache/',
-                'baseUri'        => '/manager.io/',
+                'baseUri'        => '/',
             )
         ));
     }
@@ -96,6 +97,11 @@ class Module
                         'compiledPath' => $config->application->cacheDir,
                         'compiledSeparator' => '_'
                     ]);
+
+                    /**
+                     * add functions to compiler
+                     */
+                    VoltHelper::registerViewFunctions($volt, VoltHelper::getUtil(['ng']));
 
                     return $volt;
                 },
