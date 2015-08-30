@@ -27,6 +27,8 @@ class Application extends BaseApplication
          * Register common namespaces
          */
         $loader->registerNamespaces([
+            'app\common\base'       => APP_PATH . '/common/base/',
+            'app\common\components'       => APP_PATH . '/common/components/',
             'app\common\helpers'    => APP_PATH . '/common/helpers/'
         ]);
 
@@ -39,6 +41,12 @@ class Application extends BaseApplication
             $router = new Router();
 
             $router->setDefaultModule('frontend');
+
+            $router->add('/', [
+                'module' => 'frontend',
+                'controller' => 'index',
+                'action' => 'index'
+            ]);
 
             $router->add('/:controller/:action', [
                 'module' => 'frontend',

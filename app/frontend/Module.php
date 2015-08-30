@@ -134,5 +134,12 @@ class Module
 
             return $session;
         });
+
+        /**
+         * List of assets that need to be loaded
+         */
+        $di->setShared('asset_config', function () {
+            return require_once(APP_PATH . '/frontend/config/assets.php');
+        });
     }
 }
