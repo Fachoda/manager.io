@@ -2,6 +2,7 @@
 
 namespace app\frontend;
 
+use app\common\helpers\VoltHelper;
 use Phalcon\Loader;
 use Phalcon\Mvc\Dispatcher;
 use Phalcon\Mvc\Url as UrlResolver;
@@ -28,7 +29,7 @@ class Module
                 'pluginsDir'     => APP_PATH . '/frontend/plugins/',
                 'libraryDir'     => APP_PATH . '/frontend/library/',
                 'cacheDir'       => APP_PATH . '/frontend/cache/',
-                'baseUri'        => '/manager.io/',
+                'baseUri'        => '/',
             )
         ));
     }
@@ -97,6 +98,11 @@ class Module
                         'compiledSeparator' => '_'
                     ]);
 
+                    /**
+                     * add functions to compiler
+                     */
+                    VoltHelper::registerViewFunctions($volt, VoltHelper::getUtil(['ng']));
+
                     return $volt;
                 },
                 '.phtml' => 'Phalcon\Mvc\View\Engine\Php'
@@ -127,6 +133,13 @@ class Module
             $session->start();
 
             return $session;
+        });
+
+        /**
+         * List of assets that need to be loaded
+         */
+        $di->setShared('asset_config', function () {
+            return require_once(APP_PATH . '/frontend/config/assets.php');
         });
     }
 }
