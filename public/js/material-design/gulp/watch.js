@@ -17,7 +17,7 @@
 
         gulp.watch([
             path.join(conf.paths.src, '/app/**/*.css'),
-            path.join(conf.paths.src, '/app/**/*.less')
+            path.join(conf.paths.src, '/app/assets/less/**/*.less')
         ], function (event) {
             if (isOnlyChange(event)) {
                 gulp.start('styles');

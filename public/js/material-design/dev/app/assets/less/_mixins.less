@@ -1,0 +1,23 @@
+.font-alias () {
+    text-rendering: optimizeLegibility!important;
+    -webkit-font-smoothing: antialiased!important;
+    -moz-osx-font-smoothing: grayscale!important;
+}
+
+.make-font (@size: 24px) {
+    font-size: @size;
+}
+
+.set-size(@width: 0px, @height: 0px) {
+    width: @width;
+    height: @height;
+}
+
+.make-circle() {
+    border-radius: 50%;
+}
+
+.pos-absolute (@z-index: 1) {
+    position: absolute;
+    z-index: @z-index;
+}

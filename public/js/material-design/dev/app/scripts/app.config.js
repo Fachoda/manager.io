@@ -3,12 +3,14 @@
 
     angular
         .module('manager')
-        .config(config);
+        .config(['$logProvider', '$mdIconProvider', config]);
 
     /** @ngInject */
-    function config($logProvider) {
+    function config($logProvider, $mdIconProvider) {
         // Enable log
         $logProvider.debugEnabled(true);
+
+        $mdIconProvider.fontSet('mi', 'material-icons');
     }
 
 }());
