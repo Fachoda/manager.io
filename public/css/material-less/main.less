@@ -1,0 +1,3268 @@
+@charset 'UTF-8';
+
+// Color variables (appears count calculates by raw css)
+@color0: #ffffff; // Appears 40 times
+@color1: #009688; // Appears 38 times
+@color2: #ff5252; // Appears 12 times
+@color3: #c62828; // Appears 8 times
+@color4: #f2b53f; // Appears 8 times
+@color5: #619bf2; // Appears 8 times
+@color6: #eeeeee; // Appears 7 times
+@color7: #dddddd; // Appears 7 times
+@color8: #767676; // Appears 6 times
+@color9: #a31356; // Appears 6 times
+@color10: #43a047; // Appears 6 times
+@color11: #cccccc; // Appears 3 times
+@color12: #999999; // Appears 3 times
+@color13: #fffbef; // Appears 3 times
+@color14: #babcbf; // Appears 3 times
+@color15: #444444; // Appears 2 times
+@color16: #419641; // Appears 2 times
+@color17: #3f4245; // Appears 2 times
+@color18: #333333; // Appears 2 times
+@color19: #e5e5e5; // Appears 2 times
+@color20: #0d0d0d; // Appears 2 times
+
+// Width variables (appears count calculates by raw css)
+@width3: 36px; // Appears 2 times
+@width8: 100%; // Appears 11 times
+@width10: 35px; // Appears 2 times
+@width11: 4px; // Appears 2 times
+@width14: 1em; // Appears 3 times
+
+// Height variables (appears count calculates by raw css)
+@height1: 115px; // Appears 2 times
+@height8: 35px; // Appears 2 times
+@height11: 30px; // Appears 3 times
+
+@font-face {
+  font-family:dripicons;
+  font-family:weathericons;
+  font-style:normal;
+  font-style:normal;
+  font-weight:400;
+  font-weight:400;
+  src:url(../font/weathericons-regular-webfont.eot);
+  src:url(../font/weathericons-regular-webfont.eot?#iefix) format('embedded-opentype'),url(../font/weathericons-regular-webfont.woff) format('woff'),url(../font/weathericons-regular-webfont.ttf) format('truetype'),url(../font/weathericons-regular-webfont.svg#weathericons-regular-webfontRg) format('svg');
+  src:url(../fonts/dripicons.eot);
+  src:url(../fonts/dripicons.eot?#iefix) format('embedded-opentype'),url(../fonts/dripicons.ttf) format('truetype'),url(../fonts/dripicons.svg#dripicons) format('svg'),url(../fonts/dripicons.woff) format('woff');
+}
+[data-icon] {
+  &:before {
+    -webkit-font-smoothing:antialiased;
+    content:attr(data-icon);
+    display:inline-block;
+    font-family:dripicons;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:400;
+    line-height:1em;
+    speak:none;
+    text-decoration:none;
+    text-transform:none!important;
+    width:@width14;
+  }
+}
+[class*=' {
+	icon-'] {
+  &:before {
+    -webkit-font-smoothing:antialiased;
+    display:inline-block;
+    font-family:dripicons;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:400;
+    line-height:1em;
+    speak:none;
+    text-decoration:none;
+    text-transform:none!important;
+    width:@width14;
+  }
+}
+}
+[class^=icon-] {
+  &:before {
+    -webkit-font-smoothing:antialiased;
+    display:inline-block;
+    font-family:dripicons;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:400;
+    line-height:1em;
+    speak:none;
+    text-decoration:none;
+    text-transform:none!important;
+    width:@width14;
+  }
+}
+.icon-align-center {
+  &:before {
+    content:"\e000";
+  }
+}
+.icon-align-justify {
+  &:before {
+    content:"\e001";
+  }
+}
+.icon-align-left {
+  &:before {
+    content:"\e002";
+  }
+}
+.icon-align-right {
+  &:before {
+    content:"\e003";
+  }
+}
+.icon-arrow-down {
+  &:before {
+    content:"\e004";
+  }
+}
+.icon-arrow-left {
+  &:before {
+    content:"\e005";
+  }
+}
+.icon-arrow-thin-down {
+  &:before {
+    content:"\e006";
+  }
+}
+.icon-arrow-right {
+  &:before {
+    content:"\e007";
+  }
+}
+.icon-arrow-thin-left {
+  &:before {
+    content:"\e008";
+  }
+}
+.icon-arrow-thin-up {
+  &:before {
+    content:"\e009";
+  }
+}
+.icon-arrow-up {
+  &:before {
+    content:"\e010";
+  }
+}
+.icon-attachment {
+  &:before {
+    content:"\e011";
+  }
+}
+.icon-arrow-thin-right {
+  &:before {
+    content:"\e012";
+  }
+}
+.icon-code {
+  &:before {
+    content:"\e013";
+  }
+}
+.icon-cloud {
+  &:before {
+    content:"\e014";
+  }
+}
+.icon-chevron-right {
+  &:before {
+    content:"\e015";
+  }
+}
+.icon-chevron-up {
+  &:before {
+    content:"\e016";
+  }
+}
+.icon-chevron-down {
+  &:before {
+    content:"\e017";
+  }
+}
+.icon-chevron-left {
+  &:before {
+    content:"\e018";
+  }
+}
+.icon-camera {
+  &:before {
+    content:"\e019";
+  }
+}
+.icon-checkmark {
+  &:before {
+    content:"\e020";
+  }
+}
+.icon-calendar {
+  &:before {
+    content:"\e021";
+  }
+}
+.icon-clockwise {
+  &:before {
+    content:"\e022";
+  }
+}
+.icon-conversation {
+  &:before {
+    content:"\e023";
+  }
+}
+.icon-direction {
+  &:before {
+    content:"\e024";
+  }
+}
+.icon-cross {
+  &:before {
+    content:"\e025";
+  }
+}
+.icon-graph-line {
+  &:before {
+    content:"\e026";
+  }
+}
+.icon-gear {
+  &:before {
+    content:"\e027";
+  }
+}
+.icon-graph-bar {
+  &:before {
+    content:"\e028";
+  }
+}
+.icon-export {
+  &:before {
+    content:"\e029";
+  }
+}
+.icon-feed {
+  &:before {
+    content:"\e030";
+  }
+}
+.icon-folder {
+  &:before {
+    content:"\e031";
+  }
+}
+.icon-forward {
+  &:before {
+    content:"\e032";
+  }
+}
+.icon-folder-open {
+  &:before {
+    content:"\e033";
+  }
+}
+.icon-download {
+  &:before {
+    content:"\e034";
+  }
+}
+.icon-document-new {
+  &:before {
+    content:"\e035";
+  }
+}
+.icon-document-edit {
+  &:before {
+    content:"\e036";
+  }
+}
+.icon-document {
+  &:before {
+    content:"\e037";
+  }
+}
+.icon-gaming {
+  &:before {
+    content:"\e038";
+  }
+}
+.icon-graph-pie {
+  &:before {
+    content:"\e039";
+  }
+}
+.icon-heart {
+  &:before {
+    content:"\e040";
+  }
+}
+.icon-headset {
+  &:before {
+    content:"\e041";
+  }
+}
+.icon-help {
+  &:before {
+    content:"\e042";
+  }
+}
+.icon-information {
+  &:before {
+    content:"\e043";
+  }
+}
+.icon-loading {
+  &:before {
+    content:"\e044";
+  }
+}
+.icon-lock {
+  &:before {
+    content:"\e045";
+  }
+}
+.icon-location {
+  &:before {
+    content:"\e046";
+  }
+}
+.icon-lock-open {
+  &:before {
+    content:"\e047";
+  }
+}
+.icon-mail {
+  &:before {
+    content:"\e048";
+  }
+}
+.icon-map {
+  &:before {
+    content:"\e049";
+  }
+}
+.icon-media-loop {
+  &:before {
+    content:"\e050";
+  }
+}
+.icon-mobile-portrait {
+  &:before {
+    content:"\e051";
+  }
+}
+.icon-mobile-landscape {
+  &:before {
+    content:"\e052";
+  }
+}
+.icon-microphone {
+  &:before {
+    content:"\e053";
+  }
+}
+.icon-minus {
+  &:before {
+    content:"\e054";
+  }
+}
+.icon-message {
+  &:before {
+    content:"\e055";
+  }
+}
+.icon-menu {
+  &:before {
+    content:"\e056";
+  }
+}
+.icon-media-stop {
+  &:before {
+    content:"\e057";
+  }
+}
+.icon-media-shuffle {
+  &:before {
+    content:"\e058";
+  }
+}
+.icon-media-previous {
+  &:before {
+    content:"\e059";
+  }
+}
+.icon-media-play {
+  &:before {
+    content:"\e060";
+  }
+}
+.icon-media-next {
+  &:before {
+    content:"\e061";
+  }
+}
+.icon-media-pause {
+  &:before {
+    content:"\e062";
+  }
+}
+.icon-monitor {
+  &:before {
+    content:"\e063";
+  }
+}
+.icon-move {
+  &:before {
+    content:"\e064";
+  }
+}
+.icon-plus {
+  &:before {
+    content:"\e065";
+  }
+}
+.icon-phone {
+  &:before {
+    content:"\e066";
+  }
+}
+.icon-preview {
+  &:before {
+    content:"\e067";
+  }
+}
+.icon-print {
+  &:before {
+    content:"\e068";
+  }
+}
+.icon-media-record {
+  &:before {
+    content:"\e069";
+  }
+}
+.icon-music {
+  &:before {
+    content:"\e070";
+  }
+}
+.icon-home {
+  &:before {
+    content:"\e071";
+  }
+}
+.icon-question {
+  &:before {
+    content:"\e072";
+  }
+}
+.icon-reply {
+  &:before {
+    content:"\e073";
+  }
+}
+.icon-reply-all {
+  &:before {
+    content:"\e074";
+  }
+}
+.icon-return {
+  &:before {
+    content:"\e075";
+  }
+}
+.icon-retweet {
+  &:before {
+    content:"\e076";
+  }
+}
+.icon-search {
+  &:before {
+    content:"\e077";
+  }
+}
+.icon-view-thumb {
+  &:before {
+    content:"\e078";
+  }
+}
+.icon-view-list-large {
+  &:before {
+    content:"\e079";
+  }
+}
+.icon-view-list {
+  &:before {
+    content:"\e080";
+  }
+}
+.icon-upload {
+  &:before {
+    content:"\e081";
+  }
+}
+.icon-user-group {
+  &:before {
+    content:"\e082";
+  }
+}
+.icon-trash {
+  &:before {
+    content:"\e083";
+  }
+}
+.icon-user {
+  &:before {
+    content:"\e084";
+  }
+}
+.icon-thumbs-up {
+  &:before {
+    content:"\e085";
+  }
+}
+.icon-thumbs-down {
+  &:before {
+    content:"\e086";
+  }
+}
+.icon-tablet-portrait {
+  &:before {
+    content:"\e087";
+  }
+}
+.icon-tablet-landscape {
+  &:before {
+    content:"\e088";
+  }
+}
+.icon-tag {
+  &:before {
+    content:"\e089";
+  }
+}
+.icon-star {
+  &:before {
+    content:"\e090";
+  }
+}
+.icon-volume-full {
+  &:before {
+    content:"\e091";
+  }
+}
+.icon-volume-off {
+  &:before {
+    content:"\e092";
+  }
+}
+.icon-warning {
+  &:before {
+    content:"\e093";
+  }
+}
+.icon-window {
+  &:before {
+    content:"\e094";
+  }
+}
+.wi {
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing:antialiased;
+  display:inline-block;
+  font-family:weathericons;
+  font-style:normal;
+  font-weight:400;
+  line-height:1;
+}
+.wi-day-cloudy-gusts {
+  &:before {
+    content:"\f000";
+  }
+}
+.wi-day-cloudy-windy {
+  &:before {
+    content:"\f001";
+  }
+}
+.wi-day-cloudy {
+  &:before {
+    content:"\f002";
+  }
+}
+.wi-day-fog {
+  &:before {
+    content:"\f003";
+  }
+}
+.wi-day-hail {
+  &:before {
+    content:"\f004";
+  }
+}
+.wi-day-lightning {
+  &:before {
+    content:"\f005";
+  }
+}
+.wi-day-rain-mix {
+  &:before {
+    content:"\f006";
+  }
+}
+.wi-day-rain-wind {
+  &:before {
+    content:"\f007";
+  }
+}
+.wi-day-rain {
+  &:before {
+    content:"\f008";
+  }
+}
+.wi-day-showers {
+  &:before {
+    content:"\f009";
+  }
+}
+.wi-day-snow {
+  &:before {
+    content:"\f00a";
+  }
+}
+.wi-day-sprinkle {
+  &:before {
+    content:"\f00b";
+  }
+}
+.wi-day-sunny-overcast {
+  &:before {
+    content:"\f00c";
+  }
+}
+.wi-day-sunny {
+  &:before {
+    content:"\f00d";
+  }
+}
+.wi-day-storm-showers {
+  &:before {
+    content:"\f00e";
+  }
+}
+.wi-day-thunderstorm {
+  &:before {
+    content:"\f010";
+  }
+}
+.wi-cloudy-gusts {
+  &:before {
+    content:"\f011";
+  }
+}
+.wi-cloudy-windy {
+  &:before {
+    content:"\f012";
+  }
+}
+.wi-cloudy {
+  &:before {
+    content:"\f013";
+  }
+}
+.wi-fog {
+  &:before {
+    content:"\f014";
+  }
+}
+.wi-hail {
+  &:before {
+    content:"\f015";
+  }
+}
+.wi-rain-mix {
+  &:before {
+    content:"\f017";
+  }
+}
+.wi-rain-wind {
+  &:before {
+    content:"\f018";
+  }
+}
+.wi-rain {
+  &:before {
+    content:"\f019";
+  }
+}
+.wi-showers {
+  &:before {
+    content:"\f01a";
+  }
+}
+.wi-snow {
+  &:before {
+    content:"\f01b";
+  }
+}
+.wi-sprinkle {
+  &:before {
+    content:"\f01c";
+  }
+}
+.wi-storm-showers {
+  &:before {
+    content:"\f01d";
+  }
+}
+.wi-thunderstorm {
+  &:before {
+    content:"\f01e";
+  }
+}
+.wi-windy {
+  &:before {
+    content:"\f021";
+  }
+}
+.wi-night-alt-cloudy-gusts {
+  &:before {
+    content:"\f022";
+  }
+}
+.wi-night-alt-cloudy-windy {
+  &:before {
+    content:"\f023";
+  }
+}
+.wi-night-alt-hail {
+  &:before {
+    content:"\f024";
+  }
+}
+.wi-night-alt-lightning {
+  &:before {
+    content:"\f025";
+  }
+}
+.wi-night-alt-rain-mix {
+  &:before {
+    content:"\f026";
+  }
+}
+.wi-night-alt-rain-wind {
+  &:before {
+    content:"\f027";
+  }
+}
+.wi-night-alt-rain {
+  &:before {
+    content:"\f028";
+  }
+}
+.wi-night-alt-showers {
+  &:before {
+    content:"\f029";
+  }
+}
+.wi-night-alt-snow {
+  &:before {
+    content:"\f02a";
+  }
+}
+.wi-night-alt-sprinkle {
+  &:before {
+    content:"\f02b";
+  }
+}
+.wi-night-alt-storm-showers {
+  &:before {
+    content:"\f02c";
+  }
+}
+.wi-night-alt-thunderstorm {
+  &:before {
+    content:"\f02d";
+  }
+}
+.wi-night-clear {
+  &:before {
+    content:"\f02e";
+  }
+}
+.wi-night-cloudy-gusts {
+  &:before {
+    content:"\f02f";
+  }
+}
+.wi-night-cloudy-windy {
+  &:before {
+    content:"\f030";
+  }
+}
+.wi-night-cloudy {
+  &:before {
+    content:"\f031";
+  }
+}
+.wi-night-hail {
+  &:before {
+    content:"\f032";
+  }
+}
+.wi-night-lightning {
+  &:before {
+    content:"\f033";
+  }
+}
+.wi-night-rain-mix {
+  &:before {
+    content:"\f034";
+  }
+}
+.wi-night-rain-wind {
+  &:before {
+    content:"\f035";
+  }
+}
+.wi-night-rain {
+  &:before {
+    content:"\f036";
+  }
+}
+.wi-night-showers {
+  &:before {
+    content:"\f037";
+  }
+}
+.wi-night-snow {
+  &:before {
+    content:"\f038";
+  }
+}
+.wi-night-sprinkle {
+  &:before {
+    content:"\f039";
+  }
+}
+.wi-night-storm-showers {
+  &:before {
+    content:"\f03a";
+  }
+}
+.wi-night-thunderstorm {
+  &:before {
+    content:"\f03b";
+  }
+}
+.wi-celsius {
+  &:before {
+    content:"\f03c";
+  }
+}
+.wi-cloud-down {
+  &:before {
+    content:"\f03d";
+  }
+}
+.wi-cloud-refresh {
+  &:before {
+    content:"\f03e";
+  }
+}
+.wi-cloud-up {
+  &:before {
+    content:"\f040";
+  }
+}
+.wi-cloud {
+  &:before {
+    content:"\f041";
+  }
+}
+.wi-degrees {
+  &:before {
+    content:"\f042";
+  }
+}
+.wi-down-left {
+  &:before {
+    content:"\f043";
+  }
+}
+.wi-down {
+  &:before {
+    content:"\f044";
+  }
+}
+.wi-fahrenheit {
+  &:before {
+    content:"\f045";
+  }
+}
+.wi-horizon-alt {
+  &:before {
+    content:"\f046";
+  }
+}
+.wi-horizon {
+  &:before {
+    content:"\f047";
+  }
+}
+.wi-left {
+  &:before {
+    content:"\f048";
+  }
+}
+.wi-lightning {
+  &:before {
+    content:"\f016";
+  }
+}
+.wi-night-fog {
+  &:before {
+    content:"\f04a";
+  }
+}
+.wi-refresh-alt {
+  &:before {
+    content:"\f04b";
+  }
+}
+.wi-refresh {
+  &:before {
+    content:"\f04c";
+  }
+}
+.wi-right {
+  &:before {
+    content:"\f04d";
+  }
+}
+.wi-sprinkles {
+  &:before {
+    content:"\f04e";
+  }
+}
+.wi-strong-wind {
+  &:before {
+    content:"\f050";
+  }
+}
+.wi-sunrise {
+  &:before {
+    content:"\f051";
+  }
+}
+.wi-sunset {
+  &:before {
+    content:"\f052";
+  }
+}
+.wi-thermometer-exterior {
+  &:before {
+    content:"\f053";
+  }
+}
+.wi-thermometer-internal {
+  &:before {
+    content:"\f054";
+  }
+}
+.wi-thermometer {
+  &:before {
+    content:"\f055";
+  }
+}
+.wi-tornado {
+  &:before {
+    content:"\f056";
+  }
+}
+.wi-up-right {
+  &:before {
+    content:"\f057";
+  }
+}
+.wi-up {
+  &:before {
+    content:"\f058";
+  }
+}
+.wi-wind-west {
+  &:before {
+    content:"\f059";
+  }
+}
+.wi-wind-south-west {
+  &:before {
+    content:"\f05a";
+  }
+}
+.wi-wind-south-east {
+  &:before {
+    content:"\f05b";
+  }
+}
+.wi-wind-south {
+  &:before {
+    content:"\f05c";
+  }
+}
+.wi-wind-north-west {
+  &:before {
+    content:"\f05d";
+  }
+}
+.wi-wind-north-east {
+  &:before {
+    content:"\f05e";
+  }
+}
+.wi-wind-north {
+  &:before {
+    content:"\f060";
+  }
+}
+.wi-wind-east {
+  &:before {
+    content:"\f061";
+  }
+}
+.wi-smoke {
+  &:before {
+    content:"\f062";
+  }
+}
+.wi-dust {
+  &:before {
+    content:"\f063";
+  }
+}
+.wi-snow-wind {
+  &:before {
+    content:"\f064";
+  }
+}
+.wi-day-snow-wind {
+  &:before {
+    content:"\f065";
+  }
+}
+.wi-night-snow-wind {
+  &:before {
+    content:"\f066";
+  }
+}
+.wi-night-alt-snow-wind {
+  &:before {
+    content:"\f067";
+  }
+}
+.wi-day-sleet-storm {
+  &:before {
+    content:"\f068";
+  }
+}
+.wi-night-sleet-storm {
+  &:before {
+    content:"\f069";
+  }
+}
+.wi-night-alt-sleet-storm {
+  &:before {
+    content:"\f06a";
+  }
+}
+.wi-day-snow-thunderstorm {
+  &:before {
+    content:"\f06b";
+  }
+}
+.wi-night-snow-thunderstorm {
+  &:before {
+    content:"\f06c";
+  }
+}
+.wi-night-alt-snow-thunderstorm {
+  &:before {
+    content:"\f06d";
+  }
+}
+.wi-solar-eclipse {
+  &:before {
+    content:"\f06e";
+  }
+}
+.wi-lunar-eclipse {
+  &:before {
+    content:"\f070";
+  }
+}
+.wi-meteor {
+  &:before {
+    content:"\f071";
+  }
+}
+.wi-hot {
+  &:before {
+    content:"\f072";
+  }
+}
+.wi-hurricane {
+  &:before {
+    content:"\f073";
+  }
+}
+.wi-smog {
+  &:before {
+    content:"\f074";
+  }
+}
+.wi-alien {
+  &:before {
+    content:"\f075";
+  }
+}
+.wi-snowflake-cold {
+  &:before {
+    content:"\f076";
+  }
+}
+.wi-stars {
+  &:before {
+    content:"\f077";
+  }
+}
+.wi-night-partly-cloudy {
+  &:before {
+    content:"\f083";
+  }
+}
+.wi-umbrella {
+  &:before {
+    content:"\f084";
+  }
+}
+.wi-day-windy {
+  &:before {
+    content:"\f085";
+  }
+}
+.wi-night-alt-cloudy {
+  &:before {
+    content:"\f086";
+  }
+}
+.wi-up-left {
+  &:before {
+    content:"\f087";
+  }
+}
+.wi-down-right {
+  &:before {
+    content:"\f088";
+  }
+}
+.wi-time-12 {
+  &:before {
+    content:"\f089";
+  }
+}
+.wi-time-1 {
+  &:before {
+    content:"\f08a";
+  }
+}
+.wi-time-2 {
+  &:before {
+    content:"\f08b";
+  }
+}
+.wi-time-3 {
+  &:before {
+    content:"\f08c";
+  }
+}
+.wi-time-4 {
+  &:before {
+    content:"\f08d";
+  }
+}
+.wi-time-5 {
+  &:before {
+    content:"\f08e";
+  }
+}
+.wi-time-6 {
+  &:before {
+    content:"\f08f";
+  }
+}
+.wi-time-7 {
+  &:before {
+    content:"\f090";
+  }
+}
+.wi-time-8 {
+  &:before {
+    content:"\f091";
+  }
+}
+.wi-time-9 {
+  &:before {
+    content:"\f092";
+  }
+}
+.wi-time-10 {
+  &:before {
+    content:"\f093";
+  }
+}
+.wi-time-11 {
+  &:before {
+    content:"\f094";
+  }
+}
+.wi-day-sleet {
+  &:before {
+    content:"\f0b2";
+  }
+}
+.wi-night-sleet {
+  &:before {
+    content:"\f0b3";
+  }
+}
+.wi-night-alt-sleet {
+  &:before {
+    content:"\f0b4";
+  }
+}
+.wi-sleet {
+  &:before {
+    content:"\f0b5";
+  }
+}
+.wi-day-haze {
+  &:before {
+    content:"\f0b6";
+  }
+}
+.wi-beafort-0 {
+  &:before {
+    content:"\f0b7";
+  }
+}
+.wi-beafort-1 {
+  &:before {
+    content:"\f0b8";
+  }
+}
+.wi-beafort-2 {
+  &:before {
+    content:"\f0b9";
+  }
+}
+.wi-beafort-3 {
+  &:before {
+    content:"\f0ba";
+  }
+}
+.wi-beafort-4 {
+  &:before {
+    content:"\f0bb";
+  }
+}
+.wi-beafort-5 {
+  &:before {
+    content:"\f0bc";
+  }
+}
+.wi-beafort-6 {
+  &:before {
+    content:"\f0bd";
+  }
+}
+.wi-beafort-7 {
+  &:before {
+    content:"\f0be";
+  }
+}
+.wi-beafort-8 {
+  &:before {
+    content:"\f0bf";
+  }
+}
+.wi-beafort-9 {
+  &:before {
+    content:"\f0c0";
+  }
+}
+.wi-beafort-10 {
+  &:before {
+    content:"\f0c1";
+  }
+}
+.wi-beafort-11 {
+  &:before {
+    content:"\f0c2";
+  }
+}
+.wi-beafort-12 {
+  &:before {
+    content:"\f0c3";
+  }
+}
+.wi-wind-default {
+  &:before {
+    content:"\f0b1";
+  }
+}
+wi-wind-default._0-deg {
+  -moz-transform:rotate(0deg);
+  -ms-transform:rotate(0deg);
+  -o-transform:rotate(0deg);
+  -webkit-transform:rotate(0deg);
+  transform:rotate(0deg);
+}
+wi-wind-default._15-deg {
+  -moz-transform:rotate(15deg);
+  -ms-transform:rotate(15deg);
+  -o-transform:rotate(15deg);
+  -webkit-transform:rotate(15deg);
+  transform:rotate(15deg);
+}
+wi-wind-default._30-deg {
+  -moz-transform:rotate(30deg);
+  -ms-transform:rotate(30deg);
+  -o-transform:rotate(30deg);
+  -webkit-transform:rotate(30deg);
+  transform:rotate(30deg);
+}
+wi-wind-default._45-deg {
+  -moz-transform:rotate(45deg);
+  -ms-transform:rotate(45deg);
+  -o-transform:rotate(45deg);
+  -webkit-transform:rotate(45deg);
+  transform:rotate(45deg);
+}
+wi-wind-default._60-deg {
+  -moz-transform:rotate(60deg);
+  -ms-transform:rotate(60deg);
+  -o-transform:rotate(60deg);
+  -webkit-transform:rotate(60deg);
+  transform:rotate(60deg);
+}
+wi-wind-default._75-deg {
+  -moz-transform:rotate(75deg);
+  -ms-transform:rotate(75deg);
+  -o-transform:rotate(75deg);
+  -webkit-transform:rotate(75deg);
+  transform:rotate(75deg);
+}
+wi-wind-default._90-deg {
+  -moz-transform:rotate(90deg);
+  -ms-transform:rotate(90deg);
+  -o-transform:rotate(90deg);
+  -webkit-transform:rotate(90deg);
+  transform:rotate(90deg);
+}
+wi-wind-default._105-deg {
+  -moz-transform:rotate(105deg);
+  -ms-transform:rotate(105deg);
+  -o-transform:rotate(105deg);
+  -webkit-transform:rotate(105deg);
+  transform:rotate(105deg);
+}
+wi-wind-default._120-deg {
+  -moz-transform:rotate(120deg);
+  -ms-transform:rotate(120deg);
+  -o-transform:rotate(120deg);
+  -webkit-transform:rotate(120deg);
+  transform:rotate(120deg);
+}
+wi-wind-default._135-deg {
+  -moz-transform:rotate(135deg);
+  -ms-transform:rotate(135deg);
+  -o-transform:rotate(135deg);
+  -webkit-transform:rotate(135deg);
+  transform:rotate(135deg);
+}
+wi-wind-default._150-deg {
+  -moz-transform:rotate(150deg);
+  -ms-transform:rotate(150deg);
+  -o-transform:rotate(150deg);
+  -webkit-transform:rotate(150deg);
+  transform:rotate(150deg);
+}
+wi-wind-default._165-deg {
+  -moz-transform:rotate(165deg);
+  -ms-transform:rotate(165deg);
+  -o-transform:rotate(165deg);
+  -webkit-transform:rotate(165deg);
+  transform:rotate(165deg);
+}
+wi-wind-default._180-deg {
+  -moz-transform:rotate(180deg);
+  -ms-transform:rotate(180deg);
+  -o-transform:rotate(180deg);
+  -webkit-transform:rotate(180deg);
+  transform:rotate(180deg);
+}
+wi-wind-default._195-deg {
+  -moz-transform:rotate(195deg);
+  -ms-transform:rotate(195deg);
+  -o-transform:rotate(195deg);
+  -webkit-transform:rotate(195deg);
+  transform:rotate(195deg);
+}
+wi-wind-default._210-deg {
+  -moz-transform:rotate(210deg);
+  -ms-transform:rotate(210deg);
+  -o-transform:rotate(210deg);
+  -webkit-transform:rotate(210deg);
+  transform:rotate(210deg);
+}
+wi-wind-default._225-deg {
+  -moz-transform:rotate(225deg);
+  -ms-transform:rotate(225deg);
+  -o-transform:rotate(225deg);
+  -webkit-transform:rotate(225deg);
+  transform:rotate(225deg);
+}
+wi-wind-default._240-deg {
+  -moz-transform:rotate(240deg);
+  -ms-transform:rotate(240deg);
+  -o-transform:rotate(240deg);
+  -webkit-transform:rotate(240deg);
+  transform:rotate(240deg);
+}
+wi-wind-default._255-deg {
+  -moz-transform:rotate(255deg);
+  -ms-transform:rotate(255deg);
+  -o-transform:rotate(255deg);
+  -webkit-transform:rotate(255deg);
+  transform:rotate(255deg);
+}
+wi-wind-default._270-deg {
+  -moz-transform:rotate(270deg);
+  -ms-transform:rotate(270deg);
+  -o-transform:rotate(270deg);
+  -webkit-transform:rotate(270deg);
+  transform:rotate(270deg);
+}
+wi-wind-default._285-deg {
+  -moz-transform:rotate(295deg);
+  -ms-transform:rotate(295deg);
+  -o-transform:rotate(295deg);
+  -webkit-transform:rotate(295deg);
+  transform:rotate(295deg);
+}
+wi-wind-default._300-deg {
+  -moz-transform:rotate(300deg);
+  -ms-transform:rotate(300deg);
+  -o-transform:rotate(300deg);
+  -webkit-transform:rotate(300deg);
+  transform:rotate(300deg);
+}
+wi-wind-default._315-deg {
+  -moz-transform:rotate(315deg);
+  -ms-transform:rotate(315deg);
+  -o-transform:rotate(315deg);
+  -webkit-transform:rotate(315deg);
+  transform:rotate(315deg);
+}
+wi-wind-default._330-deg {
+  -moz-transform:rotate(330deg);
+  -ms-transform:rotate(330deg);
+  -o-transform:rotate(330deg);
+  -webkit-transform:rotate(330deg);
+  transform:rotate(330deg);
+}
+wi-wind-default._345-deg {
+  -moz-transform:rotate(345deg);
+  -ms-transform:rotate(345deg);
+  -o-transform:rotate(345deg);
+  -webkit-transform:rotate(345deg);
+  transform:rotate(345deg);
+}
+.wi-moon-new {
+  &:before {
+    content:"\f095";
+  }
+}
+.wi-moon-waxing-cresent-1 {
+  &:before {
+    content:"\f096";
+  }
+}
+.wi-moon-waxing-cresent-2 {
+  &:before {
+    content:"\f097";
+  }
+}
+.wi-moon-waxing-cresent-3 {
+  &:before {
+    content:"\f098";
+  }
+}
+.wi-moon-waxing-cresent-4 {
+  &:before {
+    content:"\f099";
+  }
+}
+.wi-moon-waxing-cresent-5 {
+  &:before {
+    content:"\f09a";
+  }
+}
+.wi-moon-waxing-cresent-6 {
+  &:before {
+    content:"\f09b";
+  }
+}
+.wi-moon-first-quarter {
+  &:before {
+    content:"\f09c";
+  }
+}
+.wi-moon-waxing-gibbous-1 {
+  &:before {
+    content:"\f09d";
+  }
+}
+.wi-moon-waxing-gibbous-2 {
+  &:before {
+    content:"\f09e";
+  }
+}
+.wi-moon-waxing-gibbous-3 {
+  &:before {
+    content:"\f09f";
+  }
+}
+.wi-moon-waxing-gibbous-4 {
+  &:before {
+    content:"\f0a0";
+  }
+}
+.wi-moon-waxing-gibbous-5 {
+  &:before {
+    content:"\f0a1";
+  }
+}
+.wi-moon-waxing-gibbous-6 {
+  &:before {
+    content:"\f0a2";
+  }
+}
+.wi-moon-full {
+  &:before {
+    content:"\f0a3";
+  }
+}
+.wi-moon-waning-gibbous-1 {
+  &:before {
+    content:"\f0a4";
+  }
+}
+.wi-moon-waning-gibbous-2 {
+  &:before {
+    content:"\f0a5";
+  }
+}
+.wi-moon-waning-gibbous-3 {
+  &:before {
+    content:"\f0a6";
+  }
+}
+.wi-moon-waning-gibbous-4 {
+  &:before {
+    content:"\f0a7";
+  }
+}
+.wi-moon-waning-gibbous-5 {
+  &:before {
+    content:"\f0a8";
+  }
+}
+.wi-moon-waning-gibbous-6 {
+  &:before {
+    content:"\f0a9";
+  }
+}
+.wi-moon-3rd-quarter {
+  &:before {
+    content:"\f0aa";
+  }
+}
+.wi-moon-waning-crescent-1 {
+  &:before {
+    content:"\f0ab";
+  }
+}
+.wi-moon-waning-crescent-2 {
+  &:before {
+    content:"\f0ac";
+  }
+}
+.wi-moon-waning-crescent-3 {
+  &:before {
+    content:"\f0ad";
+  }
+}
+.wi-moon-waning-crescent-4 {
+  &:before {
+    content:"\f0ae";
+  }
+}
+.wi-moon-waning-crescent-5 {
+  &:before {
+    content:"\f0af";
+  }
+}
+.wi-moon-waning-crescent-6 {
+  &:before {
+    content:"\f0b0";
+  }
+}
+@-webkit-keyframes {
+  fade-up-enter {
+    -moz-transform:translateY(20px);
+    -ms-transform:translateY(20px);
+    -o-transform:translateY(20px);
+    -webkit-transform:translateY(20px);
+    0%{opacity:0;
+      transform:translateY(20px);
+    }
+    fade-up-leave {
+      -moz-transform:translateY(0px);
+      -ms-transform:translateY(0px);
+      -o-transform:translateY(0px);
+      -webkit-transform:translateY(0px);
+      0%{opacity:1;
+        transform:translateY(0px);
+      }
+      animate-flip-y-enter {
+        -moz-transform:perspective(3000px) rotateY(90deg);
+        -ms-transform:perspective(3000px) rotateY(90deg);
+        -o-transform:perspective(3000px) rotateY(90deg);
+        0%{-webkit-transform:perspective(3000px) rotateY(90deg);
+          opacity:0;
+          transform:perspective(3000px) rotateY(90deg);
+        }
+        animate-flip-y-leave {
+          -moz-transform:perspective(3000px) rotateY(0deg);
+          -ms-transform:perspective(3000px) rotateY(0deg);
+          -o-transform:perspective(3000px) rotateY(0deg);
+          0%{-webkit-transform:perspective(3000px) rotateY(0deg);
+            opacity:1;
+            transform:perspective(3000px) rotateY(0deg);
+          }
+          slideInDown {
+            -moz-transform:translateY(-2000px);
+            -ms-transform:translateY(-2000px);
+            -o-transform:translateY(-2000px);
+            -webkit-transform:translateY(-2000px);
+            0%{opacity:0;
+              transform:translateY(-2000px);
+            }
+            slideOutUp {
+              -moz-transform:translateY(0);
+              -ms-transform:translateY(0);
+              -o-transform:translateY(0);
+              0%{-webkit-transform:translateY(0);
+                transform:translateY(0);
+              }
+              spin {
+                100%{-webkit-transform:rotateZ(360deg);
+                }
+              }
+              100% {
+                -moz-transform:perspective(3000px) rotateY(-90deg);
+                -moz-transform:perspective(3000px) rotateY(-90deg);
+                -moz-transform:perspective(3000px) rotateY(-90deg);
+                -moz-transform:perspective(3000px) rotateY(-90deg);
+                -moz-transform:perspective(3000px) rotateY(0deg);
+                -moz-transform:perspective(3000px) rotateY(0deg);
+                -moz-transform:perspective(3000px) rotateY(0deg);
+                -moz-transform:perspective(3000px) rotateY(0deg);
+                -moz-transform:translateY(-2000px);
+                -moz-transform:translateY(-2000px);
+                -moz-transform:translateY(-2000px);
+                -moz-transform:translateY(-2000px);
+                -moz-transform:translateY(-20px);
+                -moz-transform:translateY(-20px);
+                -moz-transform:translateY(-20px);
+                -moz-transform:translateY(-20px);
+                -moz-transform:translateY(0);
+                -moz-transform:translateY(0);
+                -moz-transform:translateY(0);
+                -moz-transform:translateY(0);
+                -moz-transform:translateY(0);
+                -moz-transform:translateY(0px);
+                -moz-transform:translateY(0px);
+                -moz-transform:translateY(0px);
+                -ms-transform:perspective(3000px) rotateY(-90deg);
+                -ms-transform:perspective(3000px) rotateY(-90deg);
+                -ms-transform:perspective(3000px) rotateY(-90deg);
+                -ms-transform:perspective(3000px) rotateY(-90deg);
+                -ms-transform:perspective(3000px) rotateY(0deg);
+                -ms-transform:perspective(3000px) rotateY(0deg);
+                -ms-transform:perspective(3000px) rotateY(0deg);
+                -ms-transform:perspective(3000px) rotateY(0deg);
+                -ms-transform:translateY(-2000px);
+                -ms-transform:translateY(-2000px);
+                -ms-transform:translateY(-2000px);
+                -ms-transform:translateY(-2000px);
+                -ms-transform:translateY(-20px);
+                -ms-transform:translateY(-20px);
+                -ms-transform:translateY(-20px);
+                -ms-transform:translateY(-20px);
+                -ms-transform:translateY(0);
+                -ms-transform:translateY(0);
+                -ms-transform:translateY(0);
+                -ms-transform:translateY(0);
+                -ms-transform:translateY(0);
+                -ms-transform:translateY(0px);
+                -ms-transform:translateY(0px);
+                -ms-transform:translateY(0px);
+                -o-transform:perspective(3000px) rotateY(-90deg);
+                -o-transform:perspective(3000px) rotateY(-90deg);
+                -o-transform:perspective(3000px) rotateY(-90deg);
+                -o-transform:perspective(3000px) rotateY(-90deg);
+                -o-transform:perspective(3000px) rotateY(0deg);
+                -o-transform:perspective(3000px) rotateY(0deg);
+                -o-transform:perspective(3000px) rotateY(0deg);
+                -o-transform:perspective(3000px) rotateY(0deg);
+                -o-transform:translateY(-2000px);
+                -o-transform:translateY(-2000px);
+                -o-transform:translateY(-2000px);
+                -o-transform:translateY(-2000px);
+                -o-transform:translateY(-20px);
+                -o-transform:translateY(-20px);
+                -o-transform:translateY(-20px);
+                -o-transform:translateY(-20px);
+                -o-transform:translateY(0);
+                -o-transform:translateY(0);
+                -o-transform:translateY(0);
+                -o-transform:translateY(0);
+                -o-transform:translateY(0);
+                -o-transform:translateY(0px);
+                -o-transform:translateY(0px);
+                -o-transform:translateY(0px);
+                -webkit-transform:perspective(3000px) rotateY(-90deg);
+                -webkit-transform:perspective(3000px) rotateY(-90deg);
+                -webkit-transform:perspective(3000px) rotateY(-90deg);
+                -webkit-transform:perspective(3000px) rotateY(-90deg);
+                -webkit-transform:perspective(3000px) rotateY(0deg);
+                -webkit-transform:perspective(3000px) rotateY(0deg);
+                -webkit-transform:perspective(3000px) rotateY(0deg);
+                -webkit-transform:perspective(3000px) rotateY(0deg);
+                -webkit-transform:translateY(-2000px);
+                -webkit-transform:translateY(-2000px);
+                -webkit-transform:translateY(-2000px);
+                -webkit-transform:translateY(-2000px);
+                -webkit-transform:translateY(-20px);
+                -webkit-transform:translateY(-20px);
+                -webkit-transform:translateY(-20px);
+                -webkit-transform:translateY(-20px);
+                -webkit-transform:translateY(0);
+                -webkit-transform:translateY(0);
+                -webkit-transform:translateY(0);
+                -webkit-transform:translateY(0);
+                -webkit-transform:translateY(0);
+                -webkit-transform:translateY(0px);
+                -webkit-transform:translateY(0px);
+                -webkit-transform:translateY(0px);
+                opacity:0;
+                opacity:0;
+                opacity:0;
+                opacity:0;
+                opacity:0;
+                opacity:0;
+                opacity:0;
+                opacity:0;
+                opacity:0;
+                opacity:0;
+                opacity:0;
+                opacity:0;
+                opacity:1;
+                opacity:1;
+                opacity:1;
+                opacity:1;
+                opacity:1;
+                opacity:1;
+                opacity:1;
+                opacity:1;
+                transform:perspective(3000px) rotateY(-90deg);
+                transform:perspective(3000px) rotateY(-90deg);
+                transform:perspective(3000px) rotateY(-90deg);
+                transform:perspective(3000px) rotateY(-90deg);
+                transform:perspective(3000px) rotateY(0deg);
+                transform:perspective(3000px) rotateY(0deg);
+                transform:perspective(3000px) rotateY(0deg);
+                transform:perspective(3000px) rotateY(0deg);
+                transform:translateY(-2000px);
+                transform:translateY(-2000px);
+                transform:translateY(-2000px);
+                transform:translateY(-2000px);
+                transform:translateY(-20px);
+                transform:translateY(-20px);
+                transform:translateY(-20px);
+                transform:translateY(-20px);
+                transform:translateY(0);
+                transform:translateY(0);
+                transform:translateY(0);
+                transform:translateY(0);
+                transform:translateY(0);
+                transform:translateY(0px);
+                transform:translateY(0px);
+                transform:translateY(0px);
+              }
+              @-moz-keyframes {
+                fade-up-enter {
+                  -moz-transform:translateY(20px);
+                  -ms-transform:translateY(20px);
+                  -o-transform:translateY(20px);
+                  -webkit-transform:translateY(20px);
+                  0%{opacity:0;
+                    transform:translateY(20px);
+                  }
+                  fade-up-leave {
+                    -moz-transform:translateY(0px);
+                    -ms-transform:translateY(0px);
+                    -o-transform:translateY(0px);
+                    -webkit-transform:translateY(0px);
+                    0%{opacity:1;
+                      transform:translateY(0px);
+                    }
+                    animate-flip-y-enter {
+                      -moz-transform:perspective(3000px) rotateY(90deg);
+                      -ms-transform:perspective(3000px) rotateY(90deg);
+                      -o-transform:perspective(3000px) rotateY(90deg);
+                      0%{-webkit-transform:perspective(3000px) rotateY(90deg);
+                        opacity:0;
+                        transform:perspective(3000px) rotateY(90deg);
+                      }
+                      animate-flip-y-leave {
+                        -moz-transform:perspective(3000px) rotateY(0deg);
+                        -ms-transform:perspective(3000px) rotateY(0deg);
+                        -o-transform:perspective(3000px) rotateY(0deg);
+                        0%{-webkit-transform:perspective(3000px) rotateY(0deg);
+                          opacity:1;
+                          transform:perspective(3000px) rotateY(0deg);
+                        }
+                        slideInDown {
+                          -moz-transform:translateY(-2000px);
+                          -ms-transform:translateY(-2000px);
+                          -o-transform:translateY(-2000px);
+                          -webkit-transform:translateY(-2000px);
+                          0%{opacity:0;
+                            transform:translateY(-2000px);
+                          }
+                          slideOutUp {
+                            -moz-transform:translateY(0);
+                            -ms-transform:translateY(0);
+                            -o-transform:translateY(0);
+                            0%{-webkit-transform:translateY(0);
+                              transform:translateY(0);
+                            }
+                            spin {
+                              100%{-moz-transform:rotateZ(360deg);
+                              }
+                            }
+                            @-o-keyframes {
+                              fade-up-enter {
+                                -moz-transform:translateY(20px);
+                                -ms-transform:translateY(20px);
+                                -o-transform:translateY(20px);
+                                -webkit-transform:translateY(20px);
+                                0%{opacity:0;
+                                  transform:translateY(20px);
+                                }
+                                fade-up-leave {
+                                  -moz-transform:translateY(0px);
+                                  -ms-transform:translateY(0px);
+                                  -o-transform:translateY(0px);
+                                  -webkit-transform:translateY(0px);
+                                  0%{opacity:1;
+                                    transform:translateY(0px);
+                                  }
+                                  animate-flip-y-enter {
+                                    -moz-transform:perspective(3000px) rotateY(90deg);
+                                    -ms-transform:perspective(3000px) rotateY(90deg);
+                                    -o-transform:perspective(3000px) rotateY(90deg);
+                                    0%{-webkit-transform:perspective(3000px) rotateY(90deg);
+                                      opacity:0;
+                                      transform:perspective(3000px) rotateY(90deg);
+                                    }
+                                    animate-flip-y-leave {
+                                      -moz-transform:perspective(3000px) rotateY(0deg);
+                                      -ms-transform:perspective(3000px) rotateY(0deg);
+                                      -o-transform:perspective(3000px) rotateY(0deg);
+                                      0%{-webkit-transform:perspective(3000px) rotateY(0deg);
+                                        opacity:1;
+                                        transform:perspective(3000px) rotateY(0deg);
+                                      }
+                                      slideInDown {
+                                        -moz-transform:translateY(-2000px);
+                                        -ms-transform:translateY(-2000px);
+                                        -o-transform:translateY(-2000px);
+                                        -webkit-transform:translateY(-2000px);
+                                        0%{opacity:0;
+                                          transform:translateY(-2000px);
+                                        }
+                                        slideOutUp {
+                                          -moz-transform:translateY(0);
+                                          -ms-transform:translateY(0);
+                                          -o-transform:translateY(0);
+                                          0%{-webkit-transform:translateY(0);
+                                            transform:translateY(0);
+                                          }
+                                          spin {
+                                            100%{-moz-transform:rotateZ(360deg);
+                                            }
+                                          }
+                                          @keyframes {
+                                            fade-up-enter {
+                                              -moz-transform:translateY(20px);
+                                              -ms-transform:translateY(20px);
+                                              -o-transform:translateY(20px);
+                                              -webkit-transform:translateY(20px);
+                                              0%{opacity:0;
+                                                transform:translateY(20px);
+                                              }
+                                              fade-up-leave {
+                                                -moz-transform:translateY(0px);
+                                                -ms-transform:translateY(0px);
+                                                -o-transform:translateY(0px);
+                                                -webkit-transform:translateY(0px);
+                                                0%{opacity:1;
+                                                  transform:translateY(0px);
+                                                }
+                                                animate-flip-y-enter {
+                                                  -moz-transform:perspective(3000px) rotateY(90deg);
+                                                  -ms-transform:perspective(3000px) rotateY(90deg);
+                                                  -o-transform:perspective(3000px) rotateY(90deg);
+                                                  0%{-webkit-transform:perspective(3000px) rotateY(90deg);
+                                                    opacity:0;
+                                                    transform:perspective(3000px) rotateY(90deg);
+                                                  }
+                                                  animate-flip-y-leave {
+                                                    -moz-transform:perspective(3000px) rotateY(0deg);
+                                                    -ms-transform:perspective(3000px) rotateY(0deg);
+                                                    -o-transform:perspective(3000px) rotateY(0deg);
+                                                    0%{-webkit-transform:perspective(3000px) rotateY(0deg);
+                                                      opacity:1;
+                                                      transform:perspective(3000px) rotateY(0deg);
+                                                    }
+                                                    slideInDown {
+                                                      -moz-transform:translateY(-2000px);
+                                                      -ms-transform:translateY(-2000px);
+                                                      -o-transform:translateY(-2000px);
+                                                      -webkit-transform:translateY(-2000px);
+                                                      0%{opacity:0;
+                                                        transform:translateY(-2000px);
+                                                      }
+                                                      slideOutUp {
+                                                        -moz-transform:translateY(0);
+                                                        -ms-transform:translateY(0);
+                                                        -o-transform:translateY(0);
+                                                        0%{-webkit-transform:translateY(0);
+                                                          transform:translateY(0);
+                                                        }
+                                                        spin {
+                                                          100%{transform:rotateZ(360deg);
+                                                          }
+                                                        }
+                                                        .animate-fade-up.ng-enter {
+                                                          -moz-animation:.35s fade-up-enter;
+                                                          -ms-animation:.35s fade-up-enter;
+                                                          -o-animation:.35s fade-up-enter;
+                                                          -webkit-animation:.35s fade-up-enter;
+                                                          animation:.35s fade-up-enter;
+                                                        }
+                                                        .animate-flip-y.ng-enter {
+                                                          -moz-animation:.5s animate-flip-y-enter;
+                                                          -ms-animation:.5s animate-flip-y-enter;
+                                                          -o-animation:.5s animate-flip-y-enter;
+                                                          -webkit-animation:.5s animate-flip-y-enter;
+                                                          animation:.5s animate-flip-y-enter;
+                                                        }
+                                                        .animate-flip-y.ng-leave {
+                                                          -moz-animation:.5s animate-flip-y-leave;
+                                                          -ms-animation:.5s animate-flip-y-leave;
+                                                          -o-animation:.5s animate-flip-y-leave;
+                                                          -webkit-animation:.5s animate-flip-y-leave;
+                                                          animation:.5s animate-flip-y-leave;
+                                                        }
+                                                        .animate-vertical-slide.ng-hide-add {
+                                                          -moz-animation:.35s slideOutUp ease-in-out;
+                                                          -ms-animation:.35s slideOutUp ease-in-out;
+                                                          -o-animation:.35s slideOutUp ease-in-out;
+                                                          -webkit-animation:.35s slideOutUp ease-in-out;
+                                                          animation:.35s slideOutUp ease-in-out;
+                                                        }
+                                                        .animate-vertical-slide.ng-hide-remove {
+                                                          -moz-animation:.35s .35s slideInDown ease-in-out;
+                                                          -ms-animation:.35s .35s slideInDown ease-in-out;
+                                                          -o-animation:.35s .35s slideInDown ease-in-out;
+                                                          -webkit-animation:.35s .35s slideInDown ease-in-out;
+                                                          animation:.35s .35s slideInDown ease-in-out;
+                                                        }
+                                                        .page-loading-overlay {
+                                                          -moz-opacity:1;
+                                                          -moz-perspective:10000px;
+                                                          -moz-transition:all 1s ease-in-out;
+                                                          -o-transition:all 1s ease-in-out;
+                                                          -webkit-opacity:1;
+                                                          -webkit-perspective:10000px;
+                                                          -webkit-transition:all 1s ease-in-out;
+                                                          background:@color0;
+                                                          bottom:0;
+                                                          filter:alpha(opacity=100);
+                                                          left:0;
+                                                          opacity:1;
+                                                          overflow:hidden;
+                                                          perspective:10000px;
+                                                          position:fixed;
+                                                          right:0;
+                                                          top:0;
+                                                          transition:all 1s ease-in-out;
+                                                          z-index:1000;
+                                                          zoom:1;
+                                                        }
+                                                        .load_circle_wrapper.loaded {
+                                                          -moz-opacity:0;
+                                                          -webkit-opacity:0;
+                                                          filter:alpha(opacity=0);
+                                                          opacity:0;
+                                                          visibility:hidden;
+                                                          zoom:1;
+                                                        }
+                                                        .loader.loaded {
+                                                          -moz-opacity:0;
+                                                          -webkit-opacity:0;
+                                                          filter:alpha(opacity=0);
+                                                          opacity:0;
+                                                          visibility:hidden;
+                                                          zoom:1;
+                                                        }
+                                                        .page-loading-overlay.loaded {
+                                                          -moz-opacity:0;
+                                                          -webkit-opacity:0;
+                                                          filter:alpha(opacity=0);
+                                                          opacity:0;
+                                                          visibility:hidden;
+                                                          zoom:1;
+                                                        }
+                                                        .big {
+                                                          height:16px;
+                                                          margin:8px 0 0;
+                                                        }
+                                                        .load_circle_wrapper {
+                                                          position:absolute;
+                                                          text-align:center;
+                                                          top:40%;
+                                                          width:@width8;
+                                                          z-index:1002;
+                                                        }
+                                                        .loading_spinner {
+                                                          margin-top:60px;
+                                                          text-align:center;
+                                                          width:@width8;
+                                                        }
+                                                        .loading {
+                                                          background-color:transparent;
+                                                          border-bottom-color:@color1;
+                                                          border-radius:50%;
+                                                          border-top-color:@color1;
+                                                          border:5px solid transparent;
+                                                          box-sizing:border-box;
+                                                          display:inline-block;
+                                                          padding:.5em;
+                                                          position:relative;
+                                                          text-align:center;
+                                                          vertical-align:middle;
+                                                        }
+                                                        .inner {
+                                                          -moz-animation:spin 1s infinite;
+                                                          -ms-animation:spin 1s infinite;
+                                                          -o-animation:spin 1s infinite;
+                                                          -webkit-animation:spin 1s infinite;
+                                                          animation:spin 1s infinite;
+                                                        }
+                                                        .outer {
+                                                          -moz-animation:spin 1s infinite;
+                                                          -ms-animation:spin 1s infinite;
+                                                          -o-animation:spin 1s infinite;
+                                                          -webkit-animation:spin 1s infinite;
+                                                          animation:spin 1s infinite;
+                                                        }
+                                                        md-progress-circular.md-default-theme {
+                                                          margin:auto;
+                                                        }
+                                                      {
+                                                        &::-webkit-scrollbar-thumb {
+                                                          background:@color1;
+                                                          border-radius:0!important;
+                                                          right:0!important;
+                                                          width:@width11!important;
+                                                        }
+                                                      }
+                                                        .slimScrollBar {
+                                                          background:@color1!important;
+                                                          border-radius:0!important;
+                                                          opacity:1!important;
+                                                          right:0!important;
+                                                          width:@width11!important;
+                                                        }
+                                                        .img-rounded {
+                                                          -moz-border-radius:0;
+                                                          -ms-border-radius:0;
+                                                          -o-border-radius:0;
+                                                          -webkit-border-radius:0;
+                                                          border-radius:0;
+                                                        }
+                                                        .square-icon {
+                                                          display:block;
+                                                          text-align:center;
+                                                        }
+                                                        .square-icon.sm {
+                                                          font-size:16px;
+                                                          height:@height8;
+                                                          line-height:@height8;
+                                                          width:@width10;
+                                                        }
+                                                        .circle-icon {
+                                                          display:block;
+                                                          text-align:center;
+                                                        }
+                                                        .circle-icon.sm {
+                                                          -moz-border-radius:50%;
+                                                          -ms-border-radius:50%;
+                                                          -o-border-radius:50%;
+                                                          -webkit-border-radius:50%;
+                                                          border-radius:50%;
+                                                          font-size:16px;
+                                                          height:@height8;
+                                                          line-height:@height8;
+                                                          width:@width10;
+                                                          md-icon {
+                                                            height:17px;
+                                                            width:17px;
+                                                          }
+                                                        }
+                                                        .circle-icon.md {
+                                                          -moz-border-radius:50%;
+                                                          -ms-border-radius:50%;
+                                                          -o-border-radius:50%;
+                                                          -webkit-border-radius:50%;
+                                                          border-radius:50%;
+                                                          font-size:16px;
+                                                          height:50px;
+                                                          line-height:50px;
+                                                          width:50px;
+                                                          md-icon {
+                                                            height:25px;
+                                                            width:25px;
+                                                          }
+                                                        }
+                                                        img.img30_30 {
+                                                          height:@height11;
+                                                          width:30px;
+                                                        }
+                                                        img.img64_64 {
+                                                          height:64px;
+                                                          width:6@width11;
+                                                        }
+                                                        img.img80_80 {
+                                                          height:80px;
+                                                          width:80px;
+                                                        }
+                                                        .small-box-icon {
+                                                          min-height:90px;
+                                                          padding:20px;
+                                                          text-align:center;
+                                                          .pull-left {
+                                                            max-width:40%;
+                                                          }
+                                                          .pull-right {
+                                                            max-width:60%;
+                                                          }
+                                                          .small-box-chart {
+                                                            height:@height1;
+                                                            line-height:@height1;
+                                                            padding-top:30px;
+                                                          }
+                                                          canvas {
+                                                            vertical-align:inherit!important;
+                                                          }
+                                                          .box-icon {
+                                                            display:block;
+                                                            float:left;
+                                                            font-size:35px;
+                                                            height:65px;
+                                                            line-height:65px;
+                                                            margin:0 15px 10px 0;
+                                                            text-align:center;
+                                                            vertical-align:middle;
+                                                            width:@width8;
+                                                          }
+                                                          .small-box-icon__icon {
+                                                            position:absolute;
+                                                            right:10px;
+                                                            top:10px;
+                                                          }
+                                                          .box-icon.rounded {
+                                                            -moz-border-radius:0;
+                                                            -ms-border-radius:0;
+                                                            -o-border-radius:0;
+                                                            -webkit-border-radius:0;
+                                                            border-radius:0;
+                                                          }
+                                                          .box-info {
+                                                            p {
+                                                              margin:0;
+                                                            }
+                                                          }
+                                                        }
+                                                        @media {
+                                                        (min-width {
+                                                          &:768px) {
+                                                          .bs-glyphicons li{width:12.5%;
+                                                            .small-box-icon.no-padding{padding:0;
+                                                            }
+                                                          }
+                                                          print {
+                                                            .no-print{display:none;
+                                                            }
+                                                            only {
+                                                              screen {
+                                                                and {
+                                                                (max-width {
+                                                                  &:800px) {
+                                                                  .table-flip-scroll .cf:after{visibility:hidden;
+                                                                    clear:both;
+                                                                    content:" ";
+                                                                    display:block;
+                                                                    font-size:0;
+                                                                    height:0;
+                                                                  }
+                                                                  &:767px) {
+                                                                  table.responsive{margin-bottom:0;
+                                                                  }
+                                                                }
+                                                                }
+                                                                }
+                                                                }
+                                                              }
+                                                              .weather-icon-list {
+                                                                text-align:center;
+                                                                .example {
+                                                                  margin:10px 3px;
+                                                                  text-align:center;
+                                                                  .icon {
+                                                                    color:@color17;
+                                                                    font-size:30px;
+                                                                    line-height:55px;
+                                                                  }
+                                                                }
+                                                              }
+                                                              .bs-glyphicons {
+                                                                list-style:none;
+                                                                margin-bottom:20px;
+                                                                overflow:hidden;
+                                                                padding-bottom:1px;
+                                                                padding-left:0;
+                                                                .glyphicon {
+                                                                  font-size:24px;
+                                                                  margin-bottom:10px;
+                                                                  margin-top:5px;
+                                                                }
+                                                                .glyphicon-class {
+                                                                  display:block;
+                                                                  text-align:center;
+                                                                }
+                                                                li {
+                                                                  border:1px solid @color7;
+                                                                  float:left;
+                                                                  font-size:12px;
+                                                                  height:@height1;
+                                                                  line-height:1.4;
+                                                                  margin:0 -1px -1px 0;
+                                                                  padding:10px;
+                                                                  text-align:center;
+                                                                  width:25%;
+                                                                }
+                                                              }
+                                                              .bg-weather {
+                                                                color:@color0;
+                                                                position:relative;
+                                                                &:before {
+                                                                  background:rgba(0,0,0,.4);
+                                                                  content:"";
+                                                                  left:0;
+                                                                  position:absolute;
+                                                                  top:0;
+                                                                  width:@width8;
+                                                                }
+                                                                i {
+                                                                  color:@color0;
+                                                                  line-height:0;
+                                                                }
+                                                              }
+                                                              .bg-cloudy {
+                                                                background:url(../images/background/bg_weather1.png) 0/cover no-repeat;
+                                                              }
+                                                              .icon-dashboard {
+                                                                -moz-border-radius:50%;
+                                                                -ms-border-radius:50%;
+                                                                -o-border-radius:50%;
+                                                                -webkit-border-radius:50%;
+                                                                border-radius:50%;
+                                                                display:inline-block;
+                                                                height:60px;
+                                                                margin:12px auto 5px;
+                                                                position:relative;
+                                                                text-align:center;
+                                                                width:60px;
+                                                                i {
+                                                                  font-size:25px;
+                                                                  line-height:60px;
+                                                                }
+                                                              }
+                                                              svg {
+                                                                width:@width8;
+                                                              }
+                                                              a {
+                                                                color:@color18;
+                                                                outline:0;
+                                                                text-decoration:none;
+                                                                &:focus {
+                                                                  color:@color20;
+                                                                  outline:0;
+                                                                  text-decoration:underline;
+                                                                }
+                                                                &:hover {
+                                                                  color:@color20;
+                                                                  outline:0;
+                                                                  text-decoration:underline;
+                                                                }
+                                                              }
+                                                              span.block {
+                                                                display:block;
+                                                              }
+                                                              .no-margin {
+                                                                margin:0;
+                                                              }
+                                                              p.small {
+                                                                font-size:10px;
+                                                              }
+                                                              p.medium {
+                                                                font-size:12px;
+                                                              }
+                                                              h2 {
+                                                                font-size:1.5em;
+                                                                margin:.83em 0;
+                                                              }
+                                                              .h3 {
+                                                                font-weight:400;
+                                                              }
+                                                              h3 {
+                                                                font-weight:400;
+                                                              }
+                                                              body {
+                                                                h3 {
+                                                                  -webkit-margin-after:1em;
+                                                                  -webkit-margin-before:1em;
+                                                                  -webkit-margin-end:0;
+                                                                  -webkit-margin-start:0;
+                                                                  display:block;
+                                                                  font-size:1.17em;
+                                                                  font-weight:700;
+                                                                }
+                                                              }
+                                                              html {
+                                                                h3 {
+                                                                  -webkit-margin-after:1em;
+                                                                  -webkit-margin-before:1em;
+                                                                  -webkit-margin-end:0;
+                                                                  -webkit-margin-start:0;
+                                                                  display:block;
+                                                                  font-size:1.17em;
+                                                                  font-weight:700;
+                                                                }
+                                                              }
+                                                              .h4 {
+                                                                border-bottom:1px solid @color19;
+                                                                margin-bottom:20px;
+                                                                padding-bottom:10px;
+                                                              }
+                                                              h4 {
+                                                                border-bottom:1px solid @color19;
+                                                                margin-bottom:20px;
+                                                                padding-bottom:10px;
+                                                              }
+                                                              h5 {
+                                                                font-size:.83em;
+                                                                margin:1.67em 0;
+                                                              }
+                                                              .mark {
+                                                                background-color:@color13;
+                                                                padding:.2em;
+                                                              }
+                                                              mark {
+                                                                background-color:@color13;
+                                                                padding:.2em;
+                                                              }
+                                                              .text-primary {
+                                                                color:@color1;
+                                                              }
+                                                              a.text-primary {
+                                                                &:hover {
+                                                                  color:@color1;
+                                                                }
+                                                              }
+                                                              .bg-primary {
+                                                                background-color:@color1;
+                                                                color:@color0;
+                                                              }
+                                                              a.bg-primary {
+                                                                background-color:@color1;
+                                                                color:@color0;
+                                                                &:hover {
+                                                                  background-color:@color1;
+                                                                  color:@color0;
+                                                                }
+                                                              }
+                                                              .text-accent {
+                                                                color:@color2;
+                                                              }
+                                                              a.text-accent {
+                                                                &:hover {
+                                                                  color:@color2;
+                                                                }
+                                                              }
+                                                              .bg-accent {
+                                                                background-color:@color2;
+                                                                color:@color0;
+                                                              }
+                                                              a.bg-accent {
+                                                                background-color:@color2;
+                                                                color:@color0;
+                                                                &:hover {
+                                                                  background-color:@color2;
+                                                                  color:@color0;
+                                                                }
+                                                              }
+                                                              .text-theme {
+                                                                color:@color1;
+                                                              }
+                                                              a.text-theme {
+                                                                &:hover {
+                                                                  color:@color1;
+                                                                }
+                                                              }
+                                                              .bg-theme {
+                                                                background-color:@color1;
+                                                                color:@color0;
+                                                              }
+                                                              a.bg-theme {
+                                                                background-color:@color1;
+                                                                color:@color0;
+                                                                &:hover {
+                                                                  background-color:@color1;
+                                                                  color:@color0;
+                                                                }
+                                                              }
+                                                              .text-success {
+                                                                color:@color10;
+                                                              }
+                                                              a.text-success {
+                                                                &:hover {
+                                                                  color:@color10;
+                                                                }
+                                                              }
+                                                              .bg-success {
+                                                                background-color:@color10;
+                                                                color:@color0;
+                                                              }
+                                                              a.bg-success {
+                                                                background-color:@color10;
+                                                                color:@color0;
+                                                                &:hover {
+                                                                  background-color:@color10;
+                                                                  color:@color0;
+                                                                }
+                                                              }
+                                                              .text-info {
+                                                                color:@color5;
+                                                              }
+                                                              a.text-info {
+                                                                &:hover {
+                                                                  color:@color5;
+                                                                }
+                                                              }
+                                                              .bg-info {
+                                                                background-color:@color5;
+                                                                color:@color0;
+                                                              }
+                                                              a.bg-info {
+                                                                background-color:@color5;
+                                                                color:@color0;
+                                                                &:hover {
+                                                                  background-color:@color5;
+                                                                  color:@color0;
+                                                                }
+                                                              }
+                                                              .text-warning {
+                                                                color:@color4;
+                                                              }
+                                                              a.text-warning {
+                                                                &:hover {
+                                                                  color:@color4;
+                                                                }
+                                                              }
+                                                              .bg-warning {
+                                                                background-color:@color4;
+                                                                color:@color0;
+                                                              }
+                                                              a.bg-warning {
+                                                                background-color:@color4;
+                                                                color:@color0;
+                                                                &:hover {
+                                                                  background-color:@color4;
+                                                                  color:@color0;
+                                                                }
+                                                              }
+                                                              .text-danger {
+                                                                color:@color3;
+                                                              }
+                                                              a.text-danger {
+                                                                &:hover {
+                                                                  color:@color3;
+                                                                }
+                                                              }
+                                                              .bg-danger {
+                                                                background-color:@color3;
+                                                                color:@color0;
+                                                              }
+                                                              a.bg-danger {
+                                                                background-color:@color3;
+                                                                color:@color0;
+                                                                &:hover {
+                                                                  background-color:@color3;
+                                                                  color:@color0;
+                                                                }
+                                                              }
+                                                              .text-violet {
+                                                                color:@color9;
+                                                              }
+                                                              a.text-violet {
+                                                                &:hover {
+                                                                  color:@color9;
+                                                                }
+                                                              }
+                                                              .bg-violet {
+                                                                background-color:@color9;
+                                                                color:@color0;
+                                                              }
+                                                              a.bg-violet {
+                                                                background-color:@color9;
+                                                                color:@color0;
+                                                                &:hover {
+                                                                  background-color:@color9;
+                                                                  color:@color0;
+                                                                }
+                                                              }
+                                                              .text-dark {
+                                                                color:@color2;
+                                                              }
+                                                              a.text-dark {
+                                                                &:hover {
+                                                                  color:@color2;
+                                                                }
+                                                              }
+                                                              .bg-dark {
+                                                                background-color:@color2;
+                                                                color:@color0;
+                                                              }
+                                                              a.bg-dark {
+                                                                background-color:@color2;
+                                                                color:@color0;
+                                                                &:hover {
+                                                                  background-color:@color2;
+                                                                  color:@color0;
+                                                                }
+                                                              }
+                                                              .bg-bright {
+                                                                background-color:#fafafa;
+                                                                color:@color8;
+                                                              }
+                                                              .bg-reverse {
+                                                                background-color:@color0;
+                                                                color:@color8;
+                                                              }
+                                                              blockquote {
+                                                                border-left:5px solid @color1;
+                                                              }
+                                                              .blockquote-reverse {
+                                                                border-right:5px solid @color1;
+                                                              }
+                                                              blockquote.pull-right {
+                                                                border-right:5px solid @color1;
+                                                              }
+                                                              kbd {
+                                                                -moz-border-radius:0;
+                                                                -ms-border-radius:0;
+                                                                -o-border-radius:0;
+                                                                -webkit-border-radius:0;
+                                                                border-radius:0;
+                                                                kbd {
+                                                                  -moz-box-shadow:none;
+                                                                  -ms-box-shadow:none;
+                                                                  -o-box-shadow:none;
+                                                                  -webkit-box-shadow:none;
+                                                                  box-shadow:none;
+                                                                  font-size:100%;
+                                                                  padding:0;
+                                                                }
+                                                              }
+                                                              pre {
+                                                                -moz-border-radius:0;
+                                                                -ms-border-radius:0;
+                                                                -o-border-radius:0;
+                                                                -webkit-border-radius:0;
+                                                                border-radius:0;
+                                                              }
+                                                              .gradient-text {
+                                                                -webkit-background-clip:text;
+                                                                -webkit-text-fill-color:transparent;
+                                                                background:-webkit-linear-gradient(92deg,#fb83fa,#00aced);
+                                                                color:@color1;
+                                                                font-size:150px;
+                                                                font-weight:300;
+                                                              }
+                                                              .text-small {
+                                                                font-size:12px;
+                                                              }
+                                                              .text-normal {
+                                                                font-size:14px;
+                                                              }
+                                                              .text-huge {
+                                                                font-size:72px;
+                                                              }
+                                                              .text-large {
+                                                                font-size:50px;
+                                                              }
+                                                              .size-h1 {
+                                                                font-size:36px;
+                                                              }
+                                                              .size-h2 {
+                                                                font-size:30px;
+                                                              }
+                                                              .size-h3 {
+                                                                font-size:24px;
+                                                              }
+                                                              .size-h4 {
+                                                                font-size:18px;
+                                                              }
+                                                              .text-thin {
+                                                                font-weight:300;
+                                                              }
+                                                              .text-ultralight {
+                                                                font-weight:100;
+                                                              }
+                                                              .color-primary {
+                                                                color:@color1;
+                                                              }
+                                                              .color-accent {
+                                                                color:@color2;
+                                                              }
+                                                              .color-theme {
+                                                                color:@color1;
+                                                              }
+                                                              .color-success {
+                                                                color:@color10;
+                                                              }
+                                                              .color-info {
+                                                                color:@color5;
+                                                              }
+                                                              .color-warning {
+                                                                color:@color4;
+                                                              }
+                                                              .color-danger {
+                                                                color:@color3;
+                                                              }
+                                                              .color-info-alt {
+                                                                color:@color9;
+                                                              }
+                                                              .color-dark {
+                                                                color:@color2;
+                                                              }
+                                                              .color-white {
+                                                                color:@color0;
+                                                              }
+                                                              .color-light {
+                                                                color:#dedede;
+                                                              }
+                                                              .color-reverse {
+                                                                color:@color0;
+                                                              }
+                                                              .color-gray-darker {
+                                                                color:#222222;
+                                                              }
+                                                              .color-gray-dark {
+                                                                color:@color18;
+                                                              }
+                                                              .color-gray {
+                                                                color:@color17;
+                                                              }
+                                                              .color-gray-light {
+                                                                color:@color12;
+                                                              }
+                                                              .color-gray-lighter {
+                                                                color:@color6;
+                                                              }
+                                                              .dropcap {
+                                                                display:block;
+                                                                float:left;
+                                                                font-size:3.1em;
+                                                                font-weight:400;
+                                                                line-height:36px;
+                                                                margin-right:6px;
+                                                                text-shadow:none;
+                                                              }
+                                                              .dropcap-circle {
+                                                                -moz-border-radius:50%;
+                                                                -ms-border-radius:50%;
+                                                                -o-border-radius:50%;
+                                                                -webkit-border-radius:50%;
+                                                                background-color:@color15;
+                                                                border-radius:50%;
+                                                                color:@color0;
+                                                                display:block;
+                                                                float:left;
+                                                                font-size:1.78em;
+                                                                font-weight:400;
+                                                                line-height:36px;
+                                                                margin-right:6px;
+                                                                text-align:center;
+                                                                text-shadow:none;
+                                                                width:@width3;
+                                                              }
+                                                              .dropcap-square {
+                                                                -moz-border-radius:0;
+                                                                -ms-border-radius:0;
+                                                                -o-border-radius:0;
+                                                                -webkit-border-radius:0;
+                                                                background-color:@color15;
+                                                                border-radius:0;
+                                                                color:@color0;
+                                                                display:block;
+                                                                float:left;
+                                                                font-size:2.3em;
+                                                                font-weight:400;
+                                                                line-height:36px;
+                                                                margin-right:6px;
+                                                                text-align:center;
+                                                                text-shadow:none;
+                                                                width:@width3;
+                                                              }
+                                                              .dropcap.colored {
+                                                                color:@color1;
+                                                              }
+                                                              .dropcap-circle.colored {
+                                                                background-color:@color1;
+                                                              }
+                                                              .dropcap-square.colored {
+                                                                background-color:@color1;
+                                                              }
+                                                              .highlight-primary {
+                                                                -moz-border-radius:0;
+                                                                -ms-border-radius:0;
+                                                                -o-border-radius:0;
+                                                                -webkit-border-radius:0;
+                                                                background-color:@color1;
+                                                                border-radius:0;
+                                                                color:@color0;
+                                                                padding:2px 5px;
+                                                              }
+                                                              .breadcrumb {
+                                                                a {
+                                                                  color:@color8;
+                                                                  &:hover {
+                                                                    text-decoration:none;
+                                                                  }
+                                                                }
+                                                              }
+                                                              .breadcrumb-alt {
+                                                                list-style:none;
+                                                                margin:0 0 20px;
+                                                                overflow:hidden;
+                                                                padding:0;
+                                                                width:@width8;
+                                                              }
+                                                              .breadcrumb-alt>li {
+                                                                float:left;
+                                                                margin:0 25px 0 0;
+                                                              }
+                                                              .breadcrumb-alt>li>a {
+                                                                background-color:@color6;
+                                                                color:@color8;
+                                                                float:left;
+                                                                font-size:12px;
+                                                                padding:10px;
+                                                                position:relative;
+                                                                &:before {
+                                                                  border-color:@color6eeeeee @color6eeeeee @color6eeeeee transparent;
+                                                                  border-style:solid;
+                                                                  border-width:1.5em 0 1.7em 1em;
+                                                                  content:"";
+                                                                  left:-1em;
+                                                                  margin-top:-1.6em;
+                                                                  position:absolute;
+                                                                  top:50%;
+                                                                }
+                                                                &:after {
+                                                                  border-bottom:1.5em solid transparent;
+                                                                  border-left:1em solid @color6;
+                                                                  border-top:1.5em solid transparent;
+                                                                  content:"";
+                                                                  margin-top:-1.5em;
+                                                                  position:absolute;
+                                                                  right:-1em;
+                                                                  top:50%;
+                                                                }
+                                                                &:hover {
+                                                                  background-color:@color1;
+                                                                  color:@color0;
+                                                                  text-decoration:none;
+                                                                  before {
+                                                                    border-color:@color1 @color1 @color1 transparent;
+                                                                  }
+                                                                  after {
+                                                                    border-left:1em solid @color1;
+                                                                  }
+                                                                }
+                                                              }
+                                                              .breadcrumb-alt>li>a.active {
+                                                                background-color:@color1;
+                                                                color:@color0;
+                                                                text-decoration:none;
+                                                                &:before {
+                                                                  border-color:@color1 @color1 @color1 transparent;
+                                                                }
+                                                                &:after {
+                                                                  border-left:1em solid @color1;
+                                                                }
+                                                              }
+                                                              .callout-elem {
+                                                                border-left:3px solid @color6;
+                                                                margin:20px 0;
+                                                                padding:20px;
+                                                                h4 {
+                                                                  margin-bottom:5px;
+                                                                  margin-top:0;
+                                                                }
+                                                                p {
+                                                                  &:last-child {
+                                                                    margin-bottom:0;
+                                                                  }
+                                                                }
+                                                              }
+                                                              .callout-elem-success {
+                                                                background-color:#f3faf3;
+                                                                border-color:@color16;
+                                                                h4 {
+                                                                  color:@color16;
+                                                                }
+                                                              }
+                                                              .callout-elem-info {
+                                                                background-color:#f4f8fa;
+                                                                border-color:@color5;
+                                                                h4 {
+                                                                  color:@color5;
+                                                                }
+                                                              }
+                                                              .callout-elem-warning {
+                                                                background-color:#fcf8f2;
+                                                                border-color:@color4;
+                                                                h4 {
+                                                                  color:@color4;
+                                                                }
+                                                              }
+                                                              .callout-elem-danger {
+                                                                background-color:#fdf7f7;
+                                                                border-color:@color3;
+                                                                h4 {
+                                                                  color:@color3;
+                                                                }
+                                                              }
+                                                              .container {
+                                                                &:after {
+                                                                  clear:both;
+                                                                  content:" ";
+                                                                  display:table;
+                                                                }
+                                                                &:before {
+                                                                  content:" ";
+                                                                  display:table;
+                                                                }
+                                                              }
+                                                              .container-fluid {
+                                                                &:after {
+                                                                  clear:both;
+                                                                  content:" ";
+                                                                  display:table;
+                                                                }
+                                                                &:before {
+                                                                  content:" ";
+                                                                  display:table;
+                                                                }
+                                                              }
+                                                              .page-container {
+                                                                margin:auto;
+                                                                max-width:1170px;
+                                                              }
+                                                              .row {
+                                                                &:after {
+                                                                  clear:both;
+                                                                  content:" ";
+                                                                  display:table;
+                                                                }
+                                                                &:before {
+                                                                  content:" ";
+                                                                  display:table;
+                                                                }
+                                                              }
+                                                              .table {
+                                                                max-width:@width8;
+                                                                .table {
+                                                                  background-color:#f3f3f3;
+                                                                }
+                                                              }
+                                                              .table>tbody>tr>td,.table>tbody>tr>th,.table>tfoot>tr>td,.table>tfoot>tr>th,.table>thead>tr>td,.table>thead>tr>th {
+                                                                padding:10px;
+                                                              }
+                                                              .table>tbody>tr.success>td,.table>tbody>tr.success>th,.table>tbody>tr>td.success,.table>tbody>tr>th.success,.table>tfoot>tr.success>td,.table>tfoot>tr.success>th,.table>tfoot>tr>td.success,.table>tfoot>tr>th.success,.table>thead>tr.success>td,.table>thead>tr.success>th,.table>thead>tr>td.success,.table>thead>tr>th.success {
+                                                                background-color:#eefff6;
+                                                              }
+                                                              .table-hover>tbody>tr.success:hover>td,.table-hover>tbody>tr.success:hover>th,.table-hover>tbody>tr:hover>.success,.table-hover>tbody>tr>td.success:hover,.table-hover>tbody>tr>th.success:hover {
+                                                                background-color:#d5ffe9;
+                                                              }
+                                                              .table>tbody>tr.info>td,.table>tbody>tr.info>th,.table>tbody>tr>td.info,.table>tbody>tr>th.info,.table>tfoot>tr.info>td,.table>tfoot>tr.info>th,.table>tfoot>tr>td.info,.table>tfoot>tr>th.info,.table>thead>tr.info>td,.table>thead>tr.info>th,.table>thead>tr>td.info,.table>thead>tr>th.info {
+                                                                background-color:#eff6ff;
+                                                              }
+                                                              .table-hover>tbody>tr.info:hover>td,.table-hover>tbody>tr.info:hover>th,.table-hover>tbody>tr:hover>.info,.table-hover>tbody>tr>td.info:hover,.table-hover>tbody>tr>th.info:hover {
+                                                                background-color:#d6e8ff;
+                                                              }
+                                                              .table>tbody>tr.warning>td,.table>tbody>tr.warning>th,.table>tbody>tr>td.warning,.table>tbody>tr>th.warning,.table>tfoot>tr.warning>td,.table>tfoot>tr.warning>th,.table>tfoot>tr>td.warning,.table>tfoot>tr>th.warning,.table>thead>tr.warning>td,.table>thead>tr.warning>th,.table>thead>tr>td.warning,.table>thead>tr>th.warning {
+                                                                background-color:@color13;
+                                                              }
+                                                              .table-hover>tbody>tr.warning:hover>td,.table-hover>tbody>tr.warning:hover>th,.table-hover>tbody>tr:hover>.warning,.table-hover>tbody>tr>td.warning:hover,.table-hover>tbody>tr>th.warning:hover {
+                                                                background-color:#fff5d6;
+                                                              }
+                                                              .table>tbody>tr.danger>td,.table>tbody>tr.danger>th,.table>tbody>tr>td.danger,.table>tbody>tr>th.danger,.table>tfoot>tr.danger>td,.table>tfoot>tr.danger>th,.table>tfoot>tr>td.danger,.table>tfoot>tr>th.danger,.table>thead>tr.danger>td,.table>thead>tr.danger>th,.table>thead>tr>td.danger,.table>thead>tr>th.danger {
+                                                                background-color:#fff1ed;
+                                                              }
+                                                              .table-hover>tbody>tr.danger:hover>td,.table-hover>tbody>tr.danger:hover>th,.table-hover>tbody>tr:hover>.danger,.table-hover>tbody>tr>td.danger:hover,.table-hover>tbody>tr>th.danger:hover {
+                                                                background-color:#ffddd4;
+                                                              }
+                                                              .table-dynamic {
+                                                                .table-filters {
+                                                                  margin:10px 0;
+                                                                  padding:8px;
+                                                                }
+                                                                .filter-result-info {
+                                                                  padding:7px;
+                                                                }
+                                                                .table-bordered {
+                                                                  border-bottom:1px solid @color7;
+                                                                  border-top:1px solid @color7;
+                                                                  thead {
+                                                                    th {
+                                                                      padding:0;
+                                                                      position:relative;
+                                                                      .glyphicon-chevron-down {
+                                                                        color:@color12;
+                                                                        position:absolute;
+                                                                        right:6px;
+                                                                        top:18px;
+                                                                        &:hover {
+                                                                          color:@color1;
+                                                                          cursor:pointer;
+                                                                        }
+                                                                      }
+                                                                      .glyphicon-chevron-up {
+                                                                        color:@color12;
+                                                                        position:absolute;
+                                                                        right:5px;
+                                                                        top:4px;
+                                                                        &:hover {
+                                                                          color:@color1;
+                                                                          cursor:pointer;
+                                                                        }
+                                                                      }
+                                                                      .glyphicon-chevron-down.active {
+                                                                        color:@color1;
+                                                                      }
+                                                                      .glyphicon-chevron-up.active {
+                                                                        color:@color1;
+                                                                      }
+                                                                    }
+                                                                    th>.th {
+                                                                      padding:8px 20px 8px 8px;
+                                                                      position:relative;
+                                                                    }
+                                                                  }
+                                                                }
+                                                                .table-footer {
+                                                                  margin:10px 0;
+                                                                  padding:8px;
+                                                                }
+                                                                .page-num-info {
+                                                                  span {
+                                                                    padding:6px;
+                                                                  }
+                                                                }
+                                                                .pagination-container {
+                                                                  ul {
+                                                                    margin:0;
+                                                                    li {
+                                                                      &:hover {
+                                                                        cursor:pointer;
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                              .table-flip-scroll {
+                                                                * {
+                                                                  html {
+                                                                    .cf {
+                                                                      zoom:1;
+                                                                    }
+                                                                  }
+                                                                }
+                                                                .table-flip-scroll {
+                                                                  table {
+                                                                    border-collapse:collapse;
+                                                                    border-spacing:0;
+                                                                    width:@width8;
+                                                                  }
+                                                                }
+                                                                td {
+                                                                  border-bottom:0;
+                                                                  border-left:0;
+                                                                  border-right:0;
+                                                                  display:block;
+                                                                  margin:0;
+                                                                  min-height:1.25em;
+                                                                  text-align:left;
+                                                                  vertical-align:top;
+                                                                  &:last-child {
+                                                                    border-bottom:1px solid @color14;
+                                                                  }
+                                                                }
+                                                                th {
+                                                                  border-bottom:0;
+                                                                  border-left:0;
+                                                                  display:block;
+                                                                  margin:0;
+                                                                  text-align:right;
+                                                                  vertical-align:top;
+                                                                  &:last-child {
+                                                                    border-bottom:1px solid @color14;
+                                                                  }
+                                                                }
+                                                                table {
+                                                                  display:block;
+                                                                  position:relative;
+                                                                  width:@width8;
+                                                                }
+                                                                thead {
+                                                                  display:block;
+                                                                  float:left;
+                                                                  tr {
+                                                                    display:block;
+                                                                  }
+                                                                }
+                                                                tbody {
+                                                                  display:block;
+                                                                  overflow-x:auto;
+                                                                  position:relative;
+                                                                  white-space:nowrap;
+                                                                  width:auto;
+                                                                  tr {
+                                                                    border-left:1px solid @color14;
+                                                                    display:inline-block;
+                                                                    vertical-align:top;
+                                                                  }
+                                                                }
+                                                                .table>thead>tr>th {
+                                                                  &:first-child {
+                                                                    border-top:1px solid @color7;
+                                                                  }
+                                                                }
+                                                              }
+                                                              .list-inline {
+                                                                margin-left:-5px;
+                                                              }
+                                                              .dl-horizontal {
+                                                                dd {
+                                                                  &:after {
+                                                                    clear:both;
+                                                                    content:" ";
+                                                                    display:table;
+                                                                  }
+                                                                  &:before {
+                                                                    content:" ";
+                                                                    display:table;
+                                                                  }
+                                                                }
+                                                              }
+                                                              table.responsive {
+                                                                border:1px solid @color7;
+                                                                td {
+                                                                  overflow:hidden;
+                                                                  position:relative;
+                                                                  white-space:nowrap;
+                                                                  &:first-child {
+                                                                    display:none;
+                                                                  }
+                                                                }
+                                                                th {
+                                                                  overflow:hidden;
+                                                                  position:relative;
+                                                                  white-space:nowrap;
+                                                                  &:first-child {
+                                                                    display:none;
+                                                                  }
+                                                                }
+                                                              }
+                                                              .pinned {
+                                                                background:@color0;
+                                                                border-left:1px solid @color11;
+                                                                border-right:1px solid @color11;
+                                                                left:0;
+                                                                overflow-x:scroll;
+                                                                overflow:hidden;
+                                                                position:absolute;
+                                                                top:0;
+                                                                width:35%;
+                                                                table {
+                                                                  border-bottom:1px solid @color7;
+                                                                  border-left:none;
+                                                                  border-right:none;
+                                                                  border-top:1px solid @color7;
+                                                                  width:@width8;
+                                                                  td {
+                                                                    white-space:nowrap;
+                                                                  }
+                                                                  th {
+                                                                    white-space:nowrap;
+                                                                  }
+                                                                }
+                                                                td {
+                                                                  &:last-child {
+                                                                    border-bottom:0;
+                                                                  }
+                                                                }
+                                                              }
+                                                              div.table-wrapper {
+                                                                border-right:1px solid @color11;
+                                                                margin-bottom:20px;
+                                                                overflow:hidden;
+                                                                position:relative;
+                                                                div.scrollable {
+                                                                  margin-left:35%;
+                                                                  overflow-y:hidden;
+                                                                  overflow:scroll;
+                                                                }
+                                                              }
+                                                              table.responsive.pinned {
+                                                                td {
+                                                                  display:none;
+                                                                }
+                                                              }
+                                                              label {
+                                                                max-width:@width8;
+                                                              }
+                                                              output {
+                                                                color:@color8;
+                                                              }
+                                                              .form-control {
+                                                                -moz-border-radius:0;
+                                                                -ms-border-radius:0;
+                                                                -o-border-radius:0;
+                                                                -webkit-border-radius:0;
+                                                                background-color:@color0;
+                                                                background-image:none;
+                                                                border-bottom:1px solid rgba(0,0,0,.12);
+                                                                border-left:none;
+                                                                border-radius:0;
+                                                                border-right:none;
+                                                                border-top:none;
+                                                                color:@color8;
+                                                                &:focus {
+                                                                  outline:0;
+                                                                }
+                                                              }
+                                                              .form-horizontal .form-group-sm input[type=date].form-control,.form-horizontal .form-group-sm input[type=datetime-local].form-control,.form-horizontal .form-group-sm input[type=month].form-control,.form-horizontal .form-group-sm input[type=time].form-control,.input-group-sm>.input-group-btn>input[type=date].btn,.input-group-sm>.input-group-btn>input[type=datetime-local].btn,.input-group-sm>.input-group-btn>input[type=month].btn,.input-group-sm>.input-group-btn>input[type=time].btn,.input-group-sm>input[type=date].form-control,.input-group-sm>input[type=date].input-group-addon,.input-group-sm>input[type=datetime-local].form-control,.input-group-sm>input[type=datetime-local].input-group-addon,.input-group-sm>input[type=month].form-control,.input-group-sm>input[type=month].input-group-addon,.input-group-sm>input[type=time].form-control,.input-group-sm>input[type=time].input-group-addon,input[type=date].input-sm,input[type=datetime-local].input-sm,input[type=month].input-sm,input[type=time].input-sm {
+                                                                line-height:@height11;
+                                                              }
+                                                              .form-horizontal .form-group-lg input[type=date].form-control,.form-horizontal .form-group-lg input[type=datetime-local].form-control,.form-horizontal .form-group-lg input[type=month].form-control,.form-horizontal .form-group-lg input[type=time].form-control,.input-group-lg>.input-group-btn>input[type=date].btn,.input-group-lg>.input-group-btn>input[type=datetime-local].btn,.input-group-lg>.input-group-btn>input[type=month].btn,.input-group-lg>.input-group-btn>input[type=time].btn,.input-group-lg>input[type=date].form-control,.input-group-lg>input[type=date].input-group-addon,.input-group-lg>input[type=datetime-local].form-control,.input-group-lg>input[type=datetime-local].input-group-addon,.input-group-lg>input[type=month].form-control,.input-group-lg>input[type=month].input-group-addon,.input-group-lg>input[type=time].form-control,.input-group-lg>input[type=time].input-group-addon,input[type=date].input-lg,input[type=datetime-local].input-lg,input[type=month].input-lg,input[type=time].input-lg {
+                                                                line-height:46px;
+                                                              }
+                                                              .checkbox {
+                                                                label {
+                                                                  margin-bottom:0;
+                                                                  padding-left:20px;
+                                                                }
+                                                              }
+                                                              .radio {
+                                                                label {
+                                                                  margin-bottom:0;
+                                                                  padding-left:20px;
+                                                                }
+                                                              }
+                                                              .checkbox input[type=checkbox],.checkbox-inline input[type=checkbox],.radio input[type=radio],.radio-inline input[type=radio] {
+                                                                margin-left:-20px;
+                                                                position:absolute;
+                                                              }
+                                                              .form-control-static {
+                                                                margin-bottom:0;
+                                                                padding-bottom:7px;
+                                                                padding-top:7px;
+                                                              }
+                                                              .form-control-static.input-lg,.form-control-static.input-sm,.form-horizontal .form-group-lg .form-control-static.form-control,.form-horizontal .form-group-sm .form-control-static.form-control,.input-group-lg>.form-control-static.form-control,.input-group-lg>.form-control-static.input-group-addon,.input-group-lg>.input-group-btn>.form-control-static.btn,.input-group-sm>.form-control-static.form-control,.input-group-sm>.form-control-static.input-group-addon,.input-group-sm>.input-group-btn>.form-control-static.btn {
+                                                                padding-left:0;
+                                                                padding-right:0;
+                                                              }
+                                                              .form-horizontal .form-group-sm .form-control,.input-group-sm>.form-control,.input-group-sm>.input-group-addon,.input-group-sm>.input-group-btn>.btn,.input-sm {
+                                                                -moz-border-radius:0;
+                                                                -ms-border-radius:0;
+                                                                -o-border-radius:0;
+                                                                -webkit-border-radius:0;
+                                                                border-radius:0;
+                                                                font-size:12px;
+                                                                height:@height11;
+                                                                line-height:1.5;
+                                                                padding:5px 10px;
+                                                              }
+                                                              .form-horizontal .form-group-sm select.form-control,.input-group-sm>.input-group-btn>select.btn,.input-group-sm>select.form-control,.input-group-sm>select.input-group-addon,select.input-sm {
+                                                                height:@height11;
+                                                                line-height:@height11;
+                                                              }
+                                                              .form-horizontal .form-group-sm select[multiple].form-control,.form-horizontal .form-group-sm textarea.form-control,.input-group-sm>.input-group-btn>select[multiple].btn,.input-group-sm>.input-group-btn>textarea.btn,.input-group-sm>select[multiple].form-control,.input-group-sm>select[multiple].input-group-addon,.input-group-sm>textarea.form-control,.input-group-sm>textarea.input-group-addon,select[multiple].input-sm,textarea.input-sm {
+                                                                height:auto;
+                                                              }

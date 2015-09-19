@@ -2,6 +2,8 @@
 
 namespace app\common\helpers;
 
+use Phalcon\Mvc\View\Engine\Volt;
+
 class VoltHelper
 {
     /**
@@ -10,7 +12,7 @@ class VoltHelper
      * @param $view
      * @param array $functions
      */
-    public static function registerViewFunctions(&$view, array $functions = [])
+    public static function registerViewFunctions(Volt &$view, array $functions = [])
     {
         $compiler = $view->getCompiler();
 

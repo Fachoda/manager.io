@@ -1,8 +1,10 @@
 <?php
 
-namespace app\frontend\controllers;
+/**
+ * Dashboard
+ */
 
-use app\common\helpers\AssetHelper;
+namespace app\frontend\controllers;
 
 class IndexController extends ControllerBase
 {

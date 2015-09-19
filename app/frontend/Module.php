@@ -2,7 +2,8 @@
 
 namespace app\frontend;
 
-use app\common\helpers\VoltHelper;
+use app\frontend\helpers\VoltHelper;
+use Phalcon\Di\FactoryDefault;
 use Phalcon\Loader;
 use Phalcon\Mvc\Dispatcher;
 use Phalcon\Mvc\Url as UrlResolver;
@@ -29,7 +30,7 @@ class Module
                 'pluginsDir'     => APP_PATH . '/frontend/plugins/',
                 'libraryDir'     => APP_PATH . '/frontend/library/',
                 'cacheDir'       => APP_PATH . '/frontend/cache/',
-                'baseUri'        => '/',
+                'baseUri'        => 'http://manager.io/',
             )
         ));
     }
@@ -39,15 +40,7 @@ class Module
      */
     public function registerAutoloaders()
     {
-        $loader = new Loader();
-
-        $loader->registerNamespaces([
-            'app\frontend\controllers'  => APP_PATH . '/frontend/controllers/',
-            'app\frontend\models'       => APP_PATH . '/frontend/models/',
-            'app\frontend\forms'        => APP_PATH . '/frontend/forms/'
-        ]);
-
-        $loader->register();
+        //namespaces already autoloaded
     }
 
     /**
@@ -55,7 +48,7 @@ class Module
      *
      * @param $di
      */
-    public function registerServices($di)
+    public function registerServices(FactoryDefault $di)
     {
         $config = $this->config();
 
