@@ -20,7 +20,7 @@ class UserEntity extends \app\common\models\UserEntity
     public function initialize()
     {
         $this->hasMany('id', 'app\frontend\models\UserProfile', 'user_id', ['alias' => 'UserProfile']);
-        $this->hasMany('id', 'app\frontend\models\UserRoles', 'user_id'. ['alias' => 'UserRoles']);
+        $this->hasMany('id', 'app\frontend\models\UserRoles', 'user_id', ['alias' => 'UserRoles']);
         $this->belongsTo('type_id', 'app\frontend\models\UserType', 'id', ['alias' => 'UserType']);
     }
 }

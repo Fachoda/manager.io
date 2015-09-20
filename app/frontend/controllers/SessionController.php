@@ -7,6 +7,10 @@
 
 namespace app\frontend\controllers;
 
+use app\common\components\auth\AuthException;
+use app\frontend\forms\session\Login;
+use app\frontend\models\UserEntity;
+
 class SessionController extends ControllerBase
 {
     /**
@@ -39,7 +43,21 @@ class SessionController extends ControllerBase
      */
     public function loginAction()
     {
+        $form = new Login();
 
+        try {
+            if (!$this->request->isPost()) {
+                if ($this->auth->hasRememberMe()) {
+                    return $this->auth->loginWithRememberMe();
+                }
+            } else {
+                return $form->login();
+            }
+        } catch (AuthException $e) {
+            $this->flash->error($e->getMessage());
+        }
+
+        $this->view->form = $form;
     }
 
     /**

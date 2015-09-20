@@ -5,7 +5,7 @@ use Phalcon\Db\Index;
 use Phalcon\Db\Reference;
 use Phalcon\Mvc\Model\Migration;
 
-class CoreActionsMigration_102 extends Migration
+class CoreActionsMigration_100 extends Migration
 {
 
     public function up()
@@ -19,6 +19,7 @@ class CoreActionsMigration_102 extends Migration
                     array(
                         'type' => Column::TYPE_INTEGER,
                         'notNull' => true,
+                        'autoIncrement' => true,
                         'size' => 11,
                         'first' => true
                     )
@@ -62,7 +63,7 @@ class CoreActionsMigration_102 extends Migration
             ),
             'options' => array(
                 'TABLE_TYPE' => 'BASE TABLE',
-                'AUTO_INCREMENT' => '',
+                'AUTO_INCREMENT' => '1',
                 'ENGINE' => 'InnoDB',
                 'TABLE_COLLATION' => 'utf8_general_ci'
             )

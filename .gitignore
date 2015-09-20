@@ -1,2 +1,6 @@
 .idea
 .phalcon
+vendor
+composer.lock
+
+tests/_output/*

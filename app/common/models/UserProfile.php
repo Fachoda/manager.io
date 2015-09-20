@@ -7,6 +7,7 @@
  */
 
 namespace app\common\models;
+use app\common\models\traits\Timestamp;
 
 /**
  * Class UserProfile
@@ -14,6 +15,8 @@ namespace app\common\models;
  */
 class UserProfile extends base\AbstractUserProfile
 {
+    use Timestamp;
+
     /**
      * @inheritdoc
      */

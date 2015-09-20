@@ -25,6 +25,10 @@
             <div class="form-container">
 
                 <form class="form-horizontal" name="loginForm">
+                    {{ form.render('username', ['ng-model': 'user.username', 'required': '']) }}
+                    {{ form.render('password') }}
+                    {{ form.render('remember_me') }}
+                    {{ form.render('csrf', ['value': security.getToken()]) }}
                     <fieldset>
                         <div class="form-group">
                             <md-input-container md-no-float>

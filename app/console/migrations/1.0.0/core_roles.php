@@ -5,7 +5,7 @@ use Phalcon\Db\Index;
 use Phalcon\Db\Reference;
 use Phalcon\Mvc\Model\Migration;
 
-class CoreRolesMigration_102 extends Migration
+class CoreRolesMigration_100 extends Migration
 {
 
     public function up()

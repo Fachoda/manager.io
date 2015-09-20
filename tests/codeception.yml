@@ -1,0 +1,21 @@
+include:
+  - codeception/api
+  - codeception/backend
+  - codeception/common
+  - codeception/console
+  - codeception/frontend
+
+paths:
+  log: codeception/_output
+
+settings:
+  colors: true
+  bootstrap: _bootstrap.php
+  memory_limit: 1024M
+  log: true
+
+coverage:
+  enabled: true
+  whitelist:
+    include:
+      - app/*

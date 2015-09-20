@@ -19,8 +19,18 @@ class UserEntityMigration_100 extends Migration
                     array(
                         'type' => Column::TYPE_INTEGER,
                         'notNull' => true,
+                        'autoIncrement' => true,
                         'size' => 11,
                         'first' => true
+                    )
+                ),
+                new Column(
+                    'type_id',
+                    array(
+                        'type' => Column::TYPE_INTEGER,
+                        'notNull' => true,
+                        'size' => 11,
+                        'after' => 'id'
                     )
                 ),
                 new Column(
@@ -29,7 +39,7 @@ class UserEntityMigration_100 extends Migration
                         'type' => Column::TYPE_VARCHAR,
                         'notNull' => true,
                         'size' => 100,
-                        'after' => 'id'
+                        'after' => 'type_id'
                     )
                 ),
                 new Column(
@@ -69,11 +79,20 @@ class UserEntityMigration_100 extends Migration
             'indexes' => array(
                 new Index('PRIMARY', array('id')),
                 new Index('username_UNIQUE', array('username')),
-                new Index('email_UNIQUE', array('email'))
+                new Index('email_UNIQUE', array('email')),
+                new Index('FK_user_type_idx', array('type_id'))
+            ),
+            'references' => array(
+                new Reference('FK_user_type', array(
+                    'referencedSchema' => 'manager',
+                    'referencedTable' => 'user_type',
+                    'columns' => array('type_id'),
+                    'referencedColumns' => array('id')
+                ))
             ),
             'options' => array(
                 'TABLE_TYPE' => 'BASE TABLE',
-                'AUTO_INCREMENT' => '',
+                'AUTO_INCREMENT' => '1',
                 'ENGINE' => 'InnoDB',
                 'TABLE_COLLATION' => 'utf8_general_ci'
             )

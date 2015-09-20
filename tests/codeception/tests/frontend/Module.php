@@ -1,6 +1,6 @@
 <?php
 
-namespace app\frontend;
+namespace tests\frontend;
 
 use app\common\components\auth\Auth;
 use app\frontend\helpers\VoltHelper;
@@ -22,7 +22,7 @@ class Module
         defined('APP_PATH') || define('APP_PATH', realpath('.'));
 
         return new \Phalcon\Config(array(
-            'database' => require(APP_PATH . '/common/config/database.php'),
+            'database' => require(__DIR__. '/database.php'),
             'application' => array(
                 'controllersDir' => APP_PATH . '/frontend/controllers/',
                 'modelsDir'      => APP_PATH . '/frontend/models/',
@@ -141,11 +141,11 @@ class Module
             return $auth;
         });
 
-        /**
-         * List of assets that need to be loaded
-         */
-        $di->setShared('asset_config', function () {
-            return require_once(APP_PATH . '/frontend/config/assets.php');
-        });
+//        /**
+//         * List of assets that need to be loaded
+//         */
+//        $di->setShared('asset_config', function () {
+//            return require_once(APP_PATH . '/frontend/config/assets.php');
+//        });
     }
 }

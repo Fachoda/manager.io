@@ -5,7 +5,7 @@ use Phalcon\Db\Index;
 use Phalcon\Db\Reference;
 use Phalcon\Mvc\Model\Migration;
 
-class UserProfileMigration_101 extends Migration
+class UserProfileMigration_100 extends Migration
 {
 
     public function up()

@@ -5,17 +5,17 @@ use Phalcon\Db\Index;
 use Phalcon\Db\Reference;
 use Phalcon\Mvc\Model\Migration;
 
-class CoreRoleActionsMigration_102 extends Migration
+class UserRolesMigration_100 extends Migration
 {
 
     public function up()
     {
         $this->morphTable(
-            'core_role_actions',
+            'user_roles',
             array(
             'columns' => array(
                 new Column(
-                    'role_id',
+                    'user_id',
                     array(
                         'type' => Column::TYPE_INTEGER,
                         'notNull' => true,
@@ -24,30 +24,30 @@ class CoreRoleActionsMigration_102 extends Migration
                     )
                 ),
                 new Column(
-                    'action_id',
+                    'role_id',
                     array(
                         'type' => Column::TYPE_INTEGER,
                         'notNull' => true,
                         'size' => 11,
-                        'after' => 'role_id'
+                        'after' => 'user_id'
                     )
                 )
             ),
             'indexes' => array(
-                new Index('FK_role_actions_role_idx', array('role_id')),
-                new Index('FK_role_actions_action_idx', array('action_id'))
+                new Index('FK_user_role_user_idx', array('user_id')),
+                new Index('FK_user_role_role_idx', array('role_id'))
             ),
             'references' => array(
-                new Reference('FK_role_actions_role', array(
+                new Reference('FK_user_role_role', array(
                     'referencedSchema' => 'manager',
                     'referencedTable' => 'core_roles',
                     'columns' => array('role_id'),
                     'referencedColumns' => array('id')
                 )),
-                new Reference('FK_role_actions_action', array(
+                new Reference('FK_user_role_user', array(
                     'referencedSchema' => 'manager',
-                    'referencedTable' => 'core_actions',
-                    'columns' => array('action_id'),
+                    'referencedTable' => 'user_entity',
+                    'columns' => array('user_id'),
                     'referencedColumns' => array('id')
                 ))
             ),
