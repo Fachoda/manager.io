@@ -6,7 +6,7 @@
  * Time: 18:31
  */
 
-namespace app\hrm;
+namespace app\pm;
 
 
 use Phalcon\Mvc\Dispatcher as PhDispatcher;
@@ -31,7 +31,7 @@ class Module extends \app\base\core\Module
         $eventManager->attach('dispatch', new \Acl('frontend'));
 
         $dispatcher->setEventsManager($eventManager);*/
-        $dispatcher->setDefaultNamespace('app\hrm\controllers');
+        $dispatcher->setDefaultNamespace('app\pm\controllers');
 
         return $dispatcher;
     }

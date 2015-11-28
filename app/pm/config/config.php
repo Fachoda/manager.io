@@ -6,40 +6,42 @@
  * Time: 19:29
  */
 
+$basePath = APP_PATH . '/pm/';
+
 return [
     'database' => [
         'adapter'       => 'Mysql',
         'host'          => '127.0.0.1',
         'username'      => 'root',
         'password'      => 'ovrjt7nc',
-        'dbname'        => 'manager'
+        'dbname'        => 'manager_pm'
     ],
     'app' => [
         'debug'     => true,
         'timezone'  => 'US/Eastern',
         'baseUri'   => 'http://manager.io/',
         'path'      => [
-            'controllersDir'    => APP_PATH . '/hrm/controllers/',
-            'modelsDir'         => APP_PATH . '/hrm/models',
-            'viewsDir'          => APP_PATH . '/hrm/views',
+            'controllersDir'    => $basePath . 'controllers',
+            'modelsDir'         => $basePath . 'models',
+            'viewsDir'          => $basePath . 'views',
         ],
         'cache'     => [
-            'cacheDir'  => APP_PATH . '/hrm/runtime/cache',
+            'cacheDir'  => $basePath . 'runtime/cache',
             'lifetime'  => 86400
         ],
         'logger'    => [
             'adapter'   => 'File',
-            'file'      => APP_PATH . '/hrm/runtime/logs/messages.log',
+            'file'      => $basePath . 'runtime/logs/messages.log',
             'format'    => '[%date%][%type%] %message%',
         ],
         'volt'      => [
-            'path'      => APP_PATH . '/hrm/runtime/volt/',
+            'path'      => $basePath . 'runtime/volt/',
             'separator' => '_'
         ],
         'runtime'   => [
-            APP_PATH . '/hrm/runtime/cache',
-            APP_PATH . '/hrm/runtime/logs',
-            APP_PATH . '/hrm/runtime/volt'
+            $basePath . 'runtime/cache',
+            $basePath . 'runtime/logs',
+            $basePath . 'runtime/volt'
         ]
     ]
 ];

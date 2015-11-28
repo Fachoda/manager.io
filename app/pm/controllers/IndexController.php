@@ -6,7 +6,7 @@
  * Time: 20:52
  */
 
-namespace app\hrm\controllers;
+namespace app\pm\controllers;
 
 
 class IndexController extends ControllerBase

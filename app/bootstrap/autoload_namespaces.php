@@ -7,6 +7,7 @@ return [
 
     'app\base'      => [$baseDir],
     'app\hrm'       => [$baseDir],
+    'app\pm'        => [$baseDir],
 
 
     'app\api'       => [$baseDir],

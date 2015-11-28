@@ -8,10 +8,9 @@
 
 namespace app\bootstrap;
 
-use Phalcon\Di\FactoryDefault;
+use Phalcon\Di\FactoryDefault as PhFactoryDefault;
 use Phalcon\Loader as PhLoader;
 use Phalcon\Mvc\Application as PhApplication;
-use Phalcon\Mvc\Router;
 
 class Application extends PhApplication
 {
@@ -19,6 +18,10 @@ class Application extends PhApplication
         'hrm' => [
             'className' => 'app\hrm\Module',
             'path' => APP_PATH . '/hrm/Module.php'
+        ],
+        'pm' => [
+            'className' => 'app\pm\Module',
+            'path' => APP_PATH . '/pm/Module.php'
         ]
     ];
 
@@ -41,7 +44,7 @@ class Application extends PhApplication
      */
     protected function registerServices()
     {
-        $this->setDI(new FactoryDefault());
+        $this->setDI(new PhFactoryDefault());
 
         $this->initNamespaces();
         $this->initRouter();
@@ -69,12 +72,19 @@ class Application extends PhApplication
         $loader->register();
     }
 
+    /**
+     * initialize the router
+     */
     protected function initRouter()
     {
         $this->getDI()->set('router', function () {
             $router = new Router();
 
-            $router->setDefaultModule('hrm');
+            $router->setDefaults([
+                'module' => 'pm',
+                'controller' => 'index',
+                'action' => 'index'
+            ]);
 
             return $router;
         });
