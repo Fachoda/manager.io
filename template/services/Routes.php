@@ -6,12 +6,12 @@
  * Time: 22:01
  */
 
-namespace app\pm\services;
+namespace app\[[module_name]]\services;
 
 use app\base\traits\DefaultRoute;
 use Phalcon\Mvc\Router\Group as PhRouterGroup;
 
-class PmRoutes extends PhRouterGroup
+class Routes extends PhRouterGroup
 {
     use DefaultRoute;
 
@@ -20,12 +20,12 @@ class PmRoutes extends PhRouterGroup
         // Default paths
         $this->setPaths(
             array(
-                'module'    => 'pm',
-                'namespace' => 'app\pm\controllers'
+                'module'    => '[[module_name]]',
+                'namespace' => 'app\[[module_name]]\controllers'
             )
         );
 
-        $this->setPrefix('/pm');
+        $this->setPrefix('/[[module_name]]');
 
         $this->addDefaults();
     }

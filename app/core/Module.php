@@ -6,7 +6,7 @@
  * Time: 18:31
  */
 
-namespace app\pm;
+namespace app\core;
 
 use Phalcon\Mvc\Dispatcher as PhDispatcher;
 
@@ -18,7 +18,7 @@ class Module extends \app\base\core\Module
     }
 
     /**
-     * set the default dispatcher for the pm module
+     * set the default dispatcher for the core module
      *
      * @return PhDispatcher
      */
@@ -30,7 +30,7 @@ class Module extends \app\base\core\Module
         $eventManager->attach('dispatch', new \Acl('frontend'));
 
         $dispatcher->setEventsManager($eventManager);*/
-        $dispatcher->setDefaultNamespace('app\pm\controllers');
+        $dispatcher->setDefaultNamespace('app\core\controllers');
 
         return $dispatcher;
     }

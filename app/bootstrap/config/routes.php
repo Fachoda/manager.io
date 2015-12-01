@@ -7,6 +7,7 @@
  */
 
 return [
-    '\app\hrm\services\HrmRoutes',
-    '\app\pm\services\PmRoutes'
+    '\app\hrm\services\Routes',
+    '\app\pm\services\Routes',
+    '\app\core\services\Routes'
 ];

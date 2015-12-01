@@ -22,6 +22,10 @@ class Application extends PhApplication
         'pm' => [
             'className' => 'app\pm\Module',
             'path' => APP_PATH . '/pm/Module.php'
+        ],
+        'core' => [
+            'className' => 'app\core\Module',
+            'path' => APP_PATH . '/core/Module.php'
         ]
     ];
 

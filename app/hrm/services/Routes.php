@@ -11,7 +11,7 @@ namespace app\hrm\services;
 use app\base\traits\DefaultRoute;
 use Phalcon\Mvc\Router\Group as PhRouterGroup;
 
-class HrmRoutes extends PhRouterGroup
+class Routes extends PhRouterGroup
 {
     use DefaultRoute;
 
