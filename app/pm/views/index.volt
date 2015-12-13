@@ -11,6 +11,7 @@
 
     <body>
         {{ content() }}
+        <script type="text/javascript" src="/js/jquery/jquery-2.1.4.min.js"></script>
         <script type="text/javascript" src="/js/handsontable/bower_components/angular/angular.js"></script>
         <script type="text/javascript" src="/js/handsontable/bower_components/handsontable/dist/handsontable.full.js"></script>
         <script type="text/javascript" src="/js/handsontable/bower_components/ngHandsontable/dist/ngHandsontable.js"></script>

@@ -21,7 +21,10 @@ class TimesheetsController extends ControllerBase
 
     public function indexAction()
     {
-        $model = TimeSheet::find();
+        $model = TimeSheet::find([
+            'limit' => 200,
+            'sort' => ['id' => 1]
+        ]);
 
         $this->view->model = $model;
     }
