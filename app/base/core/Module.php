@@ -22,6 +22,7 @@ use Phalcon\Db\Adapter\Pdo\Mysql as PhDbAdapter;
 use Phalcon\Mvc\Application as PhApplication;
 use Phalcon\Mvc\Model\MetaData\Memory as PhMetaDataMemory;
 use Phalcon\Mvc\Model\MetaData\Files as PhMetaDataFiles;
+use Phalcon\Mvc\Collection\Manager as PhCollectionManager;
 use Phalcon\Mvc\Url as PhUrl;
 use Phalcon\Mvc\View as PhView;
 
@@ -34,6 +35,8 @@ abstract class Module
         'environment',
         'dispatcher',
         'database',
+        'mongo',
+        'collectionManager',
         'session',
         'cache',
         'modelsMetaData',
@@ -271,6 +274,10 @@ abstract class Module
 
     /**
      * set the database connection under db
+     *
+     * if no database connection found abort the connection all together
+     *
+     * @return bool|void
      */
     protected function initDatabase()
     {
@@ -278,6 +285,10 @@ abstract class Module
         $logger = $this->di->get('logger');
 
         $debug = (isset($config->app->debug)) ? (bool) $config->app->debug : false;
+
+        if (!isset($config->database)) {
+            return false;
+        }
 
         $this->di->set('db', function () use ($config, $debug, $logger) {
 
@@ -306,6 +317,74 @@ abstract class Module
 
             return $connection;
         });
+
+        return true;
+    }
+
+    /**
+     * initialize a mongo database connection
+     *
+     * @return bool
+     */
+    protected function initMongo()
+    {
+        $config = $this->di->get('config');
+        $logger = $this->di->get('logger');
+
+        $debug = (isset($config->app->debug)) ? (bool) $config->app->debug : false;
+
+        if (!isset($config->mongo)) {
+            return false;
+        }
+
+        $this->di->set('mongo', function () use ($config, $debug, $logger) {
+            $options = [
+                'username'  => $config->mongo->username,
+                'password'  => $config->mongo->password,
+            ];
+
+            $host = $config->mongo->host;
+            $port = $config->mongo->port;
+            $dbname= $config->mongo->dbname;
+
+            $connection = new \MongoClient("mongodb://{$host}:{$port}", $options);
+
+            return $connection->selectDB($dbname);
+        });
+
+        return true;
+    }
+
+    /**
+     * initialize the collection manager
+     * listen for model events
+     *
+     * @return bool
+     */
+    protected function initCollectionManager()
+    {
+        if ($this->di->get('mongo') === null) {
+            return false;
+        }
+
+        //set the events manager also
+        $this->di->set('collectionManager', function () {
+            $eventsManager = new PhEventsManager();
+
+            /**
+             * listen for model events
+             * no special events defined at this moment
+             */
+            $eventsManager->attach('collection', function ($event, $model) {
+                return true;
+            });
+
+            $modelsManager = new PhCollectionManager($eventsManager);
+
+            return $modelsManager;
+        });
+
+        return true;
     }
 
     /**

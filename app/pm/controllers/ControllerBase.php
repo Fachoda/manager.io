@@ -10,7 +10,7 @@ namespace app\pm\controllers;
 
 use Phalcon\Mvc\Controller;
 
-class ControllerBase extends Controller
+abstract class ControllerBase extends Controller
 {
 
 }

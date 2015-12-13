@@ -16,7 +16,23 @@ class Router extends PhRouter
     {
         parent::__construct($defaultRoutes);
 
+        $this->addDefaultModules();
         $this->addRoutes();
+    }
+
+    /**
+     * add default path for modules so that they can be accessed using /module
+     */
+    public function addDefaultModules()
+    {
+        $routes = require(__DIR__ . '/config/defaults.php');
+        if ($routes === null || empty($routes)) {
+            return;
+        }
+
+        foreach ($routes as $path => $options) {
+            $this->add($path, $options);
+        }
     }
 
     /**

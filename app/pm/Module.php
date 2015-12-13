@@ -18,7 +18,7 @@ class Module extends \app\base\core\Module
     }
 
     /**
-     * set the default dispatcher for the pm module
+     * set the default dispatcher for the core module
      *
      * @return PhDispatcher
      */

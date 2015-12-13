@@ -9,6 +9,14 @@
 $basePath = APP_PATH . '/core/';
 
 return [
+    'mongo' => [
+        'adapter'       => 'Mongo',
+        'host'          => '127.0.0.1',
+        'port'          => '27017',
+        'username'      => 'root',
+        'password'      => 'root123',
+        'dbname'        => 'time_track'
+    ],
     'database' => [
         'adapter'       => 'Mysql',
         'host'          => '127.0.0.1',
