@@ -5,6 +5,7 @@ $baseDir    = dirname($appDir);
 
 return [
     'app\base'      => [$baseDir],
+    'app\api'       => [$baseDir],
     'app\common'    => [$baseDir],
     'app\hrm'       => [$baseDir],
     'app\pm'        => [$baseDir],

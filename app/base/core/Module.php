@@ -4,10 +4,8 @@ namespace app\base\core;
 
 use app\base\exceptions\NotImplementedException;
 use app\base\helpers\FileHelper;
-use manager\Router;
 use Phalcon\Config as PhConfig;
 use Phalcon\DI\FactoryDefault as PhFactoryDefault;
-use Phalcon\Di\FactoryDefault;
 use Phalcon\Events\Event as PhEvent;
 use Phalcon\Events\Manager as PhEventsManager;
 use Phalcon\Flash\Session as PhFlash;
@@ -64,7 +62,7 @@ abstract class Module
     /**
      * register the module
      *
-     * @param FactoryDefault $di
+     * @param PhFactoryDefault $di
      */
     public function registerServices(PhFactoryDefault $di)
     {

@@ -38,13 +38,13 @@ abstract class TimeSheet extends Collection
      *
      * @var integer
      */
-    public $entity_id;
+    public $project_id;
 
     /**
      *
-     * @var string
+     * @var integer
      */
-    public $entity_type;
+    public $task_id;
 
     /**
      *
@@ -102,23 +102,23 @@ abstract class TimeSheet extends Collection
     }
 
     /**
-     * @param $entity_id
+     * @param $project_id
      * @return $this
      */
-    public function setEntityId($entity_id)
+    public function setProjectId($project_id)
     {
-        $this->entity_id = $entity_id;
+        $this->project_id = $project_id;
 
         return $this;
     }
 
     /**
-     * @param $entity_type
+     * @param $task_id
      * @return $this
      */
-    public function setEntityType($entity_type)
+    public function seTaskId($task_id)
     {
-        $this->entity_type = $entity_type;
+        $this->task_id = $task_id;
 
         return $this;
     }

@@ -16,16 +16,66 @@
         var vm = this;
 
         vm.rowHeaders = true;
-        vm.colHeaders = true;
+        vm.colHeaders = ['Project', 'Task', 'Date', 'Duration', 'Billable'];
         vm.db = {
-            items: []
+            items: [],
+            projects: ['test1', 'test2'],
+            tasks: ['test1', 'test2']
         };
         vm.minSpareRows = 1;
         vm.maxSpareRows =10;
+        vm.columns = [
+            {
+                data: 'project_id',
+                type: 'autocomplete',
+                source: vm.db.projects,
+                strict: false
+            },
+            {
+                data: 'task_id',
+                type: 'autocomplete',
+                source: vm.db.tasks,
+                strict: false
+            },
+            {
+                data: 'date',
+                type: 'date'
+            },
+            {
+                data: 'duration',
+                type: 'numeric'
+            },
+            {
+                data: 'billable',
+                type: 'checkbox'
+            }
+        ];
 
-        $http.get('/timesheets-api/list')
+        $http.get('/api/tasks')
             .then(function (result) {
-                vm.db.items = result.data;
+                vm.db.tasks = $.map(result.data.data, function (item) {
+                    return item.title;
+                });
+                $log.info(vm.db.tasks);
+            })
+            .catch(function (err) {
+                $log.error(err);
+            });
+
+        $http.get('/api/projects')
+            .then(function (result) {
+                vm.db.projects = $.map(result.data.data, function (item) {
+                    return item.title;
+                });
+                $log.info(vm.db.projects);
+            })
+            .catch(function (err) {
+                $log.error(err);
+            });
+
+        $http.get('/api/timesheets')
+            .then(function (result) {
+                vm.db.items = result.data.data;
                 $log.info(result);
             })
             .catch(function (err) {
@@ -58,17 +108,15 @@
             var index = changes[0];
             var data = vm.db.items[index];
 
-            if (angular.isDefined(data._id.$id) && data._id.$id !== null) {
-                var postData = $.param({
-                    json: JSON.stringify({
-                        $id: data._id.$id,
-                        column: changes[1],
-                        value: changes[3]
-                    })
-                });
-                $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
-                $http.post(
-                    '/timesheets-api/update',
+            $log.info(data);
+            if (angular.isDefined(data.id) && data.id !== null) {
+                //var postData = $.param({
+                //    json: JSON.stringify(data)
+                //});
+                var postData = data;
+                $http.defaults.headers.post["Content-Type"] = "application/json";
+                $http.put(
+                    '/api/timesheets/' + data.id,
                     postData
                 );
                 $log.info('saving');

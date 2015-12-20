@@ -52,16 +52,15 @@ class TimesheetsController extends ControllerBase
             $model = new TimeSheet();
 
             $model->assign([
-                'user_id' => $i,
-                'work_type_id' => $i,
-                'entity_id' => $i,
-                'entity_type' => $i,
-                'duration' => $i,
-                'start_time' => '2015-12-13',
-                'description' => 'test',
-                'billable' => true,
-                'date' => '2015-12-13',
-                'date_added' => '2015-12-13'
+                'user_id' => ($i % 4) + 1,
+                'project_id' => ($i % 4) + 1,
+                'task_id' => ($i % 5) + 1,
+                'duration' => mt_rand(1, 20),
+                'description' => 'test ....' . $i,
+                'billable' => mt_rand(1, 20) % 5 == 0,
+                'start_time' => date('Y-m-d H:i:s', strtotime(date('Y-m-d H:i:s') . ' +' . mt_rand(0, 100) . 'days')),
+                'date' => date('Y-m-d H:i:s', strtotime(date('Y-m-d H:i:s') . ' +' . mt_rand(0, 100) . 'days')),
+                'date_added' => date('Y-m-d H:i:s')
             ]);
 
             if (!$model->save()) {
